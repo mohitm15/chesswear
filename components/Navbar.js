@@ -14,15 +14,19 @@ import { BsCartCheckFill } from 'react-icons/bs';
 const Navbar = () => {
   const ref = useRef();
   const toggleCart = () => {
-    if (ref.current.classList.contains("translate-x-full")) 
+    if (ref.current.classList.contains("hidden")) 
     {
-      ref.current.classList.remove("translate-x-full");
-      ref.current.classList.add("translate-x-0");
+      //ref.current.classList.remove("translate-x-full");
+      ref.current.classList.remove("hidden");
+      //ref.current.classList.add("translate-x-0");
+      ref.current.classList.add("block");
     } 
-    else if (!ref.current.classList.contains("translate-x-full")) 
+    else if (!ref.current.classList.contains("hidden")) 
     {
-      ref.current.classList.remove("translate-x-0");
-      ref.current.classList.add("translate-x-full");
+      //ref.current.classList.remove("translate-x-0");
+      ref.current.classList.remove("block");
+      //ref.current.classList.add("translate-x-full");
+      ref.current.classList.add("hidden");
     }
   };
 
@@ -66,7 +70,7 @@ const Navbar = () => {
       </div>
 
       {/* side bar */}
-      <div ref={ref} className="z-10 sideCart w-10/12 md:w-80 h-full absolute top-0 right-0 py-10 px-8 bg-blue-200 transform transition-transform translate-x-full ">
+      <div ref={ref} className="z-10 sideCart w-10/12 md:w-80 h-full absolute top-0 right-0 py-10 px-8 bg-blue-200 transform transition-transform  hidden">
       <h2 className="text-2xl font-bold text-center">Shopping Cart </h2>
       <div className="text-black h-[1px] mt-3 bg-black" />
         <span className="absolute top-5 right-2 cursor-pointer text-2xl text-blue-500"><AiFillCloseCircle onClick={toggleCart} /></span>

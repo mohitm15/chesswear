@@ -12,7 +12,7 @@ const Mugs = () => {
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className=""
+                    className="h-80"
                     src="https://m.media-amazon.com/images/I/71V4ZT4nDAL._SL1500_.jpg"
                   />
                 </a>
@@ -33,7 +33,7 @@ const Mugs = () => {
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className=""
+                    className="h-80"
                     src="https://m.media-amazon.com/images/I/71V4ZT4nDAL._SL1500_.jpg"
                   />
                 </a>
@@ -54,7 +54,7 @@ const Mugs = () => {
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className=""
+                    className="h-80"
                     src="https://m.media-amazon.com/images/I/71V4ZT4nDAL._SL1500_.jpg"
                   />
                 </a>
@@ -75,7 +75,7 @@ const Mugs = () => {
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className=""
+                    className="h-80"
                     src="https://m.media-amazon.com/images/I/71V4ZT4nDAL._SL1500_.jpg"
                   />
                 </a>
@@ -96,7 +96,7 @@ const Mugs = () => {
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className=""
+                    className="h-80"
                     src="https://m.media-amazon.com/images/I/71V4ZT4nDAL._SL1500_.jpg"
                   />
                 </a>
@@ -117,7 +117,7 @@ const Mugs = () => {
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className=""
+                    className="h-80"
                     src="https://m.media-amazon.com/images/I/71V4ZT4nDAL._SL1500_.jpg"
                   />
                 </a>
@@ -138,7 +138,7 @@ const Mugs = () => {
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className=""
+                    className="h-80"
                     src="https://m.media-amazon.com/images/I/71V4ZT4nDAL._SL1500_.jpg"
                   />
                 </a>
@@ -159,7 +159,7 @@ const Mugs = () => {
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
-                    className=""
+                    className="h-80"
                     src="https://m.media-amazon.com/images/I/71V4ZT4nDAL._SL1500_.jpg"
                   />
                 </a>
