@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ChessBoards = () => {
   return (
@@ -9,7 +10,7 @@ const ChessBoards = () => {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
             <Link href={"/products/wear-the-chess"}>
-              <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-4">
+              <div className="lg:w-1/5 md:w-1/3 p-4 w-full cursor-pointer shadow-lg m-4 hover:bg-stone-100">
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
@@ -30,7 +31,7 @@ const ChessBoards = () => {
               </div>
             </Link>
             <Link href={"/products/wear-the-chess"}>
-              <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-4">
+              <div className="lg:w-1/5 md:w-1/3 p-4 w-full cursor-pointer shadow-lg m-4 hover:bg-stone-100">
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
@@ -51,7 +52,7 @@ const ChessBoards = () => {
               </div>
             </Link>
             <Link href={"/products/wear-the-chess"}>
-              <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-4">
+              <div className="lg:w-1/5 md:w-1/3 p-4 w-full cursor-pointer shadow-lg m-4 hover:bg-stone-100">
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
@@ -72,7 +73,7 @@ const ChessBoards = () => {
               </div>
             </Link>
             <Link href={"/products/wear-the-chess"}>
-              <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-4">
+              <div className="lg:w-1/5 md:w-1/3 p-4 w-full cursor-pointer shadow-lg m-4 hover:bg-stone-100">
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
@@ -93,7 +94,7 @@ const ChessBoards = () => {
               </div>
             </Link>
             <Link href={"/products/wear-the-chess"}>
-              <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-4">
+              <div className="lg:w-1/5 md:w-1/3 p-4 w-full cursor-pointer shadow-lg m-4 hover:bg-stone-100">
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
@@ -114,7 +115,7 @@ const ChessBoards = () => {
               </div>
             </Link>
             <Link href={"/products/wear-the-chess"}>
-              <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-4">
+              <div className="lg:w-1/5 md:w-1/3 p-4 w-full cursor-pointer shadow-lg m-4 hover:bg-stone-100">
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
@@ -135,7 +136,7 @@ const ChessBoards = () => {
               </div>
             </Link>
             <Link href={"/products/wear-the-chess"}>
-              <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-4">
+              <div className="lg:w-1/5 md:w-1/3 p-4 w-full cursor-pointer shadow-lg m-4 hover:bg-stone-100">
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
@@ -156,7 +157,7 @@ const ChessBoards = () => {
               </div>
             </Link>
             <Link href={"/products/wear-the-chess"}>
-              <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-4">
+              <div className="lg:w-1/5 md:w-1/3 p-4 w-full cursor-pointer shadow-lg m-4 hover:bg-stone-100">
                 <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                   <img
                     alt="ecommerce"
