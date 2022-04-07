@@ -13,7 +13,7 @@ export default function Home() {
 
       
       <div className="h-2/5 w-full">
-        <Image src={imgurl} layout="responsive" alt="landing_image" />
+        <img src="/img1.jpg"  alt="landing_image"  />
       </div>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
