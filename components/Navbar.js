@@ -11,7 +11,9 @@ import {
 } from "react-icons/ai";
 import { BsCartCheckFill } from "react-icons/bs";
 
-const Navbar = () => {
+const Navbar = ({ cart, subtotal, addToCart, removeFromCart, clearCart}) => {
+  //console.log({cart, subtotal, addToCart,removeFromCart, clearCart});
+  //console.log(removeFromCart)
   const ref = useRef();
   const toggleCart = () => {
     if (ref.current.classList.contains("hidden")) {
@@ -78,60 +80,32 @@ const Navbar = () => {
           <AiFillCloseCircle onClick={toggleCart} />
         </span>
         <ol className="list-decimal font-semibold">
-          <li>
+          {
+            Object.keys(cart).length === 0 && <div className="mt-5 text-center text-xl font-extralight">Your Cart is Empty :(</div>
+          }
+          { //k is cart {k: {name, price,qty,size,variant} }
+            Object.keys(cart).map((k)=>{
+            return <li key={k}>   
             <div className="flex item my-5 ">
               <div className=" w-2/3 font-semibold">
-                T-Shirt : exclusive chess tshirts
+                {cart[k].name}
               </div>
               <div className="w-1/3 font-semibold flex items-center justify-center">
-                <AiFillPlusCircle className="text-blue-700 text-xl cursor-pointer" />
-                <span className="mx-2 text-sm">1</span>
-                <AiFillMinusCircle className="text-blue-700 text-xl cursor-pointer" />
+                <AiFillPlusCircle onClick={()=>addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant )} className="text-blue-700 text-xl cursor-pointer" />
+                <span className="mx-2 text-sm">{cart[k].qty}</span>
+                <AiFillMinusCircle onClick={()=>removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)} className="text-blue-700 text-xl cursor-pointer" />
               </div>
             </div>
-          </li>
-          <li>
-            <div className="flex item my-5 ">
-              <div className=" w-2/3 font-semibold">
-                T-Shirt : exclusive chess tshirts
-              </div>
-              <div className="w-1/3 font-semibold flex items-center justify-center">
-                <AiFillPlusCircle className="text-blue-700 text-xl cursor-pointer" />
-                <span className="mx-2 text-sm">1</span>
-                <AiFillMinusCircle className="text-blue-700 text-xl cursor-pointer" />
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="flex item my-5 ">
-              <div className=" w-2/3 font-semibold">
-                T-Shirt : exclusive chess tshirts
-              </div>
-              <div className="w-1/3 font-semibold flex items-center justify-center">
-                <AiFillPlusCircle className="text-blue-700 text-xl cursor-pointer" />
-                <span className="mx-2 text-sm">1</span>
-                <AiFillMinusCircle className="text-blue-700 text-xl cursor-pointer" />
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="flex item my-5 ">
-              <div className=" w-2/3 font-semibold">
-                T-Shirt : exclusive chess tshirts12
-              </div>
-              <div className="w-1/3 font-semibold flex items-center justify-center">
-                <AiFillPlusCircle className="text-blue-700 text-xl cursor-pointer" />
-                <span className="mx-2 text-sm">1</span>
-                <AiFillMinusCircle className="text-blue-700 text-xl cursor-pointer" />
-              </div>
-            </div>
-          </li>
+            </li>
+            })
+          }
+          
         </ol>
         <div className="mt-16 flex flex-row justify-center space-x-4">
         <button className="flex  text-white bg-blue-500 border-0 py-2 px-4 focus:outline-none hover:bg-blue-600 rounded text-base">
           <BsCartCheckFill className="m-1" />Checkout
         </button>
-        <button className="flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base">
+        <button onClick={clearCart} className="flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base">
           <AiOutlineClear className="m-1" />Clear Cart
         </button>
         </div>
