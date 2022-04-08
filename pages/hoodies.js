@@ -76,7 +76,7 @@ const Hoodies = () => {
                   <img
                     alt="ecommerce"
                     className=""
-                    src="https://cdn.shopify.com/s/files/1/0012/9259/9331/products/unisex-essential-eco-hoodie-canyon-pink-front-610335f3767ca_540x.jpg"
+                    src="https://m.media-amazon.com/images/I/71mNmVxJFHL._UL1488_.jpg"
                   />
                 </a>
                 <div className="mt-4 text-center">
@@ -97,7 +97,7 @@ const Hoodies = () => {
                   <img
                     alt="ecommerce"
                     className=""
-                    src="https://cdn.shopify.com/s/files/1/0012/9259/9331/products/unisex-essential-eco-hoodie-canyon-pink-front-610335f3767ca_540x.jpg"
+                    src="https://m.media-amazon.com/images/I/71mNmVxJFHL._UL1488_.jpg"
                   />
                 </a>
                 <div className="mt-4 text-center">
@@ -118,7 +118,7 @@ const Hoodies = () => {
                   <img
                     alt="ecommerce"
                     className=""
-                    src="https://cdn.shopify.com/s/files/1/0012/9259/9331/products/unisex-essential-eco-hoodie-canyon-pink-front-610335f3767ca_540x.jpg"
+                    src="https://m.media-amazon.com/images/I/71mNmVxJFHL._UL1488_.jpg"
                   />
                 </a>
                 <div className="mt-4 text-center">
@@ -139,7 +139,7 @@ const Hoodies = () => {
                   <img
                     alt="ecommerce"
                     className=""
-                    src="https://cdn.shopify.com/s/files/1/0012/9259/9331/products/unisex-essential-eco-hoodie-canyon-pink-front-610335f3767ca_540x.jpg"
+                    src="https://m.media-amazon.com/images/I/71mNmVxJFHL._UL1488_.jpg"
                   />
                 </a>
                 <div className="mt-4 text-center">
@@ -160,7 +160,7 @@ const Hoodies = () => {
                   <img
                     alt="ecommerce"
                     className=""
-                    src="https://cdn.shopify.com/s/files/1/0012/9259/9331/products/unisex-essential-eco-hoodie-canyon-pink-front-610335f3767ca_540x.jpg"
+                    src="https://m.media-amazon.com/images/I/71mNmVxJFHL._UL1488_.jpg"
                   />
                 </a>
                 <div className="mt-4 text-center">
