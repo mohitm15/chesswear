@@ -14,7 +14,7 @@ const Order = ({cart, subtotal}) => {
                 Order Id: 2242434535
               </h1>
               
-              <p className="leading-relaxed mb-4 text-green-700 rounded-3xl bg-green-100 p-3 border-[1px] border-green-700 inline-flex items-center justify-center ">
+              <p className="leading-relaxed mb-4 text-green-700 rounded-3xl bg-green-100 hover:bg-green-100/70 p-3 border-[1px] border-green-700 inline-flex items-center justify-center ">
                 Your Order has been successfully placed !
               </p>
               <div className="flex mb-4 justify-evenly">
