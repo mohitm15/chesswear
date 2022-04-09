@@ -8,7 +8,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
     <>
       <div className="container px-2 sm:m-auto">
         <h1 className="text-xl md:text-3xl text-center my-8 font-semibold">
-          {" "}
+          
           Checkout
         </h1>
 
@@ -25,7 +25,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
                 type="name"
                 id="name"
                 name="name  "
-                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -41,7 +41,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -59,7 +59,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
             <textarea
               id="address"
               name="address"
-              className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
@@ -77,7 +77,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
                 type="text"
                 id="phone"
                 name="phone"
-                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -90,7 +90,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
                 type="text"
                 id="city"
                 name="city"
-                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -109,7 +109,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
                 type="text"
                 id="state"
                 name="state"
-                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -125,7 +125,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
                 type="text"
                 id="pincode"
                 name="pincode"
-                className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -185,8 +185,8 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
           </ol>
 
           <span className="subtotal text-xl font-extrabold">
-            {" "}
-            Subtotal : ₹ {subtotal} /-{" "}
+            
+            Subtotal : ₹ {subtotal} /-
           </span>
         </div>
 
