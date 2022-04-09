@@ -30,7 +30,7 @@ const Navbar = ({ cart, subtotal, addToCart, removeFromCart, clearCart}) => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-start items-center py-2 mb-1 shadow-md ">
+    <div className="flex flex-col md:flex-row justify-center md:justify-start items-center py-2 mb-1 shadow-md sticky z-10 top-0 bg-white">
       <div className="logo mx-5">
         <Link href={"/"}>
           <a>
@@ -72,7 +72,7 @@ const Navbar = ({ cart, subtotal, addToCart, removeFromCart, clearCart}) => {
       {/* side bar */}
       <div
         ref={ref}
-        className="z-10 sideCart w-10/12 md:w-96 h-full absolute top-0 right-0 py-10 px-8 bg-blue-200 transform transition-transform  hidden"
+        className={`z-10 sideCart w-10/12 md:w-96 h-[100vh] absolute top-0 right-0 py-10 px-8 bg-blue-200 transform transition-transform ${Object.keys(cart).length !== 0 ? `block` : 'hidden'} `}
       >
         <h2 className="text-2xl font-bold text-center">Shopping Cart </h2>
         <div className="text-black h-[1px] mt-3 bg-black" />
@@ -99,13 +99,17 @@ const Navbar = ({ cart, subtotal, addToCart, removeFromCart, clearCart}) => {
             </li>
             })
           }
+
+
           
         </ol>
-        <div className="mt-16 flex flex-row justify-center space-x-4">
+        <div className="subtotal text-lg font-extrabold"> SubTotal : ₹ {subtotal} /- </div>
+        <div className="mt-5 flex flex-row justify-center space-x-4">
+        <Link href={'/checkout'}>
         <button className="flex  text-white bg-blue-500 border-0 py-2 px-4 focus:outline-none hover:bg-blue-600 rounded text-base">
           <BsCartCheckFill className="m-1" />Checkout
         </button>
-        <button onClick={clearCart} className="flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base">
+        </Link><button onClick={clearCart} className="flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base">
           <AiOutlineClear className="m-1" />Clear Cart
         </button>
         </div>
