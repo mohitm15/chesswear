@@ -1,11 +1,39 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import mongoose from "mongoose";
+import Product from "../../models/Product";
 
-const Slug = ({cart, addToCart }) => {
+//colosizeSlug : 
+//  {
+//     Black: {S: {slug: "wear-the-chess-formula-1"}},
+//     Blue: {M: {slug: "wear-the-chess-formula-2"}}, 
+//     Green: {L: {slug: "wear-the-chess-formula-3"}},
+//     Red: {XL: {slug: "wear-the-chess-think-1"} ,XXL: {slug: "wear-the-chess-think-2"}}
+//  }
+
+
+//date - 13-4-22
+// issue is that ki for same color I had not able to see multiple size
+// issue is that the value of color is not getting changes( somewhere i am missing setSize() and setColor()), iput it but on reloading it is getting the same value , maybe I should insert setCOlor and setsize in the button only instead of refreshVariant function.
+// abhi ke liye size same rakh kr colour change kr diye DB me
+// ek baar Jhansi se aakar video dekhna padega, but commit maar diya hai, aane ke baad refactor krenge.
+
+
+const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
+  //console.log(all_Tshirts, colorSizeSlug);
+
+  //console.log("keys = ",Object.keys(colorSizeSlug["Red"]))
+
   const router = useRouter();
   const { slug } = router.query;
   const [pin, setPin] = useState();
   const [isAvailable, setIsAvailable] = useState();
+
+  const [color, setColor] = useState(all_Tshirts[0].color);
+  const [size, setSize] = useState(all_Tshirts[0].size);
+
+  console.log("size =", size, " color = ",color);
+
   const checkservicibilty = async () => {
     let pins = await fetch("http://localhost:3000/api/pincode");
     let pinjson = await pins.json();
@@ -22,6 +50,16 @@ const Slug = ({cart, addToCart }) => {
   const onChangePin = (e) => {
     setPin(e.target.value);
   };
+
+  const refreshVariant = (newsize, newcolor) => {
+     let url = `http://localhost:3000/products/${colorSizeSlug[newcolor][newsize]['slug']}`;
+     //console.log("url = ",url, "newcolor - ",newcolor, "newsize - ", newsize)
+     console.log("newvaraint -", colorSizeSlug)
+    //  setColor(newcolor);
+    //  setSize(newsize);
+    window.location = url;
+
+  }
 
   return (
     <>
@@ -149,18 +187,96 @@ const Slug = ({cart, addToCart }) => {
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
                   <span className="mr-3">Color</span>
-                  <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                  <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                  <button className="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                  {Object.keys(colorSizeSlug).includes("Red") &&
+                    Object.keys(colorSizeSlug["Red"]).includes(size) && (
+                      <button
+                        onClick={()=>refreshVariant(size,'Red')}
+                        className={`border-2 bg-red-600 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Red" ? "border-black" : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(colorSizeSlug).includes("Green") &&
+                    Object.keys(colorSizeSlug["Green"]).includes(size) && (
+                      <button
+                        onClick={()=>refreshVariant(size,'Green')}
+                        className={`border-2 ml-1 bg-green-600 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Green" ? "border-black" : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(colorSizeSlug).includes("Black") &&
+                    Object.keys(colorSizeSlug["Black"]).includes(size) && (
+                      <button
+                        onClick={()=>refreshVariant(size,'Black')}
+                        className={`border-2 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Black" ? "border-black" : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(colorSizeSlug).includes("White") &&
+                    Object.keys(colorSizeSlug["White"]).includes(size) && (
+                      <button
+                        onClick={()=>refreshVariant(size,'White')}
+                        className={`border-2 bg-white rounded-full w-6 h-6 focus:outline-none ${
+                          color === "White" ? "border-black" : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(colorSizeSlug).includes("Yellow") &&
+                    Object.keys(colorSizeSlug["Yellow"]).includes(size) && (
+                      <button
+                        onClick={()=>refreshVariant(size,'Yellow')}
+                        className={`border-2 bg-yellow-600 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Yellow"
+                            ? "border-black"
+                            : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(colorSizeSlug).includes("Purple") &&
+                    Object.keys(colorSizeSlug["Purple"]).includes(size) && (
+                      <button
+                        onClick={()=>refreshVariant(size,'Purple')}
+                        className={`border-2 bg-purple-600 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Purple"
+                            ? "border-black"
+                            : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(colorSizeSlug).includes("Maroon") &&
+                    Object.keys(colorSizeSlug["Maroon"]).includes(size) && (
+                      <button
+                        onClick={()=>refreshVariant(size,'Maroon')}
+                        className={`border-2 bg-pink-900 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Maroon"
+                            ? "border-black"
+                            : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
+                    {Object.keys(colorSizeSlug).includes("Blue") &&
+                    Object.keys(colorSizeSlug["Blue"]).includes(size) && (
+                      <button
+                        onClick={()=>refreshVariant(size,'Blue')}
+                        className={`border-2 bg-blue-500 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Blue"
+                            ? "border-black"
+                            : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
                 </div>
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
                   <div className="relative">
-                    <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
-                      <option>SM</option>
-                      <option>M</option>
-                      <option>L</option>
-                      <option>XL</option>
+                    <select value={size} onChange={(e)=>refreshVariant(e.target.value,color)} className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
+                      {Object.keys(colorSizeSlug[color]).includes('S') && <option value={'S'}>S</option>}  
+                      {Object.keys(colorSizeSlug[color]).includes('M') && <option value={'M'}>M</option>}
+                      {Object.keys(colorSizeSlug[color]).includes('L') && <option value={'L'}>L</option>}
+                      {Object.keys(colorSizeSlug[color]).includes('XL') && <option value={'XL'}>XL</option>}
+                      {Object.keys(colorSizeSlug[color]).includes('XXL') && <option value={'XXL'}>XXL</option>}
                     </select>
                     <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                       <svg
@@ -182,7 +298,19 @@ const Slug = ({cart, addToCart }) => {
                 <span className="title-font font-medium text-2xl text-gray-900">
                   ₹499
                 </span>
-                <button onClick={()=>addToCart(slug, 1, 499, 'wear the chess(XL, Red)', 'XL', 'Red' )} className="flex ml-auto md:ml-24 text-sm lg:text-base text-white bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded">
+                <button
+                  onClick={() =>
+                    addToCart(
+                      slug,
+                      1,
+                      499,
+                      "wear the chess(XL, Red)",
+                      "XL",
+                      "Red"
+                    )
+                  }
+                  className="flex ml-auto md:ml-24 text-sm lg:text-base text-white bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded"
+                >
                   Add to Cart
                 </button>
                 <button className="flex ml-1 md:ml-2 text-white text-sm lg:text-base bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded">
@@ -218,20 +346,19 @@ const Slug = ({cart, addToCart }) => {
                 </button>
               </div>
 
-              {
-                isAvailable != null ? (
-                  isAvailable ? (
-                    <div className="text-sm mt-4 text-green-600">
-                      Yay ! This pincode is serviceable .
-                    </div>
-                  ) : (
-                    <div className="text-sm mt-4 text-red-600">
-                      Sorry ! We do not deliver to this pincode yet .
-                    </div>
-                  )
-                ) : (<div></div>)
-              }
-
+              {isAvailable != null ? (
+                isAvailable ? (
+                  <div className="text-sm mt-4 text-green-600">
+                    Yay ! This pincode is serviceable .
+                  </div>
+                ) : (
+                  <div className="text-sm mt-4 text-red-600">
+                    Sorry ! We do not deliver to this pincode yet .
+                  </div>
+                )
+              ) : (
+                <div></div>
+              )}
             </div>
           </div>
         </div>
@@ -239,5 +366,33 @@ const Slug = ({cart, addToCart }) => {
     </>
   );
 };
+
+// taking all the variants of a tshirt/hoodies of same title from the slug
+// for eg, if slug=wear-chess-think-2, then it will give all the 'Chess-Think Tshirts'=title tshirts in variant-array
+export async function getServerSideProps(context) {
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGO_URI);
+  }
+  let product = await Product.findOne({ slug: context.query.slug });
+  let all_Tshirts = await Product.find({ title: product.title });
+  //all tshirts of same title with the given 'slug'
+  //console.log("all -",all_Tshirts)
+  let colorSizeSlug = {};
+  //eg: {'Red': {'XL':'wear-the-chess-king-1}}
+  for (let item of all_Tshirts) {
+    if (Object.keys(colorSizeSlug).includes(item.color)) {
+      colorSizeSlug[item.color][item.size] = { slug: item.slug };
+    } else {
+      colorSizeSlug[item.color] = {};
+      colorSizeSlug[item.color][item.size] = { slug: item.slug };
+    }
+  }
+  return {
+    props: {
+      all_Tshirts: JSON.parse(JSON.stringify(all_Tshirts)),
+      colorSizeSlug: JSON.parse(JSON.stringify(colorSizeSlug)),
+    }, // will be passed to the page component as props
+  };
+}
 
 export default Slug;
