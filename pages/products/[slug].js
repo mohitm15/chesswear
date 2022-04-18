@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 import mongoose from "mongoose";
 import Product from "../../models/Product";
 
-//colosizeSlug : 
+//colosizeSlug :
 //  {
 //     Black: {S: {slug: "wear-the-chess-formula-1"}},
-//     Blue: {M: {slug: "wear-the-chess-formula-2"}}, 
+//     Blue: {M: {slug: "wear-the-chess-formula-2"}},
 //     Green: {L: {slug: "wear-the-chess-formula-3"}},
 //     Red: {XL: {slug: "wear-the-chess-think-1"} ,XXL: {slug: "wear-the-chess-think-2"}}
 //  }
@@ -17,7 +17,6 @@ import Product from "../../models/Product";
 // issue is that the value of color is not getting changes( somewhere i am missing setSize() and setColor()), iput it but on reloading it is getting the same value , maybe I should insert setCOlor and setsize in the button only instead of refreshVariant function.
 // abhi ke liye size same rakh kr colour change kr diye DB me
 // ek baar Jhansi se aakar video dekhna padega, but commit maar diya hai, aane ke baad refactor krenge.
-
 
 //date - 17-4-22
 //issue of setColor & setSize is resolved but now the window reload functon disabled. It is beacuse when the page reloads , the state value of color and size revert back to the its initial value & not the current value. That's why you can see the updated url is not displayed in chrome tab.
@@ -35,7 +34,7 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
   const [color, setColor] = useState(all_Tshirts[0].color);
   const [size, setSize] = useState(all_Tshirts[0].size);
 
-  console.log("size =", size, " color = ",color);
+  console.log("size =", size, " color = ", color);
 
   const checkservicibilty = async () => {
     let pins = await fetch("http://localhost:3000/api/pincode");
@@ -55,11 +54,11 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
   };
 
   const refreshVariant = (newsize, newcolor) => {
-     let url = `http://localhost:3000/products/${colorSizeSlug[newcolor][newsize]['slug']}`;
-     //console.log("url = ",url, "newcolor - ",newcolor, "newsize - ", newsize)
-     //console.log("newvaraint -", colorSizeSlug)
-    //window.location = url;    
-  }
+    let url = `http://localhost:3000/products/${colorSizeSlug[newcolor][newsize]["slug"]}`;
+    //console.log("url = ",url, "newcolor - ",newcolor, "newsize - ", newsize)
+    //console.log("newvaraint -", colorSizeSlug)
+    router.push(url,undefined,{shallow:true});
+  };
 
   return (
     <>
@@ -69,7 +68,7 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
             <img
               alt="ecommerce"
               className="lg:w-1/2 w-full h-80 lg:h-[36rem] object-cover object-top rounded"
-              src={`${colorSizeSlug[color][size]['url']}`}
+              src={`${colorSizeSlug[color][size]["url"]}`}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
@@ -190,7 +189,10 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                   {Object.keys(colorSizeSlug).includes("Red") &&
                     Object.keys(colorSizeSlug["Red"]).includes(size) && (
                       <button
-                        onClick={()=>{refreshVariant(size,'Red');setColor('Red')}}
+                        onClick={() => {
+                          refreshVariant(size, "Red");
+                          setColor("Red");
+                        }}
                         className={`border-2 bg-red-600 rounded-full w-6 h-6 focus:outline-none ${
                           color === "Red" ? "border-black" : "border-gray-300"
                         }`}
@@ -199,7 +201,10 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                   {Object.keys(colorSizeSlug).includes("Green") &&
                     Object.keys(colorSizeSlug["Green"]).includes(size) && (
                       <button
-                        onClick={()=>{refreshVariant(size,'Green');setColor('Green')}}
+                        onClick={() => {
+                          refreshVariant(size, "Green");
+                          setColor("Green");
+                        }}
                         className={`border-2 ml-1 bg-green-600 rounded-full w-6 h-6 focus:outline-none ${
                           color === "Green" ? "border-black" : "border-gray-300"
                         }`}
@@ -208,7 +213,10 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                   {Object.keys(colorSizeSlug).includes("Black") &&
                     Object.keys(colorSizeSlug["Black"]).includes(size) && (
                       <button
-                        onClick={()=>{refreshVariant(size,'Black');setColor('Black')}}
+                        onClick={() => {
+                          refreshVariant(size, "Black");
+                          setColor("Black");
+                        }}
                         className={`border-2 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none ${
                           color === "Black" ? "border-black" : "border-gray-300"
                         }`}
@@ -217,7 +225,10 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                   {Object.keys(colorSizeSlug).includes("White") &&
                     Object.keys(colorSizeSlug["White"]).includes(size) && (
                       <button
-                        onClick={()=>{refreshVariant(size,'White');setColor('White')}}
+                        onClick={() => {
+                          refreshVariant(size, "White");
+                          setColor("White");
+                        }}
                         className={`border-2 bg-white rounded-full w-6 h-6 focus:outline-none ${
                           color === "White" ? "border-black" : "border-gray-300"
                         }`}
@@ -226,7 +237,10 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                   {Object.keys(colorSizeSlug).includes("Yellow") &&
                     Object.keys(colorSizeSlug["Yellow"]).includes(size) && (
                       <button
-                        onClick={()=>{refreshVariant(size,'Yellow');setColor('Yellow')}}
+                        onClick={() => {
+                          refreshVariant(size, "Yellow");
+                          setColor("Yellow");
+                        }}
                         className={`border-2 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none ${
                           color === "Yellow"
                             ? "border-black"
@@ -237,7 +251,10 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                   {Object.keys(colorSizeSlug).includes("Purple") &&
                     Object.keys(colorSizeSlug["Purple"]).includes(size) && (
                       <button
-                        onClick={()=>{refreshVariant(size,'Purple');setColor('Purple')}}
+                        onClick={() => {
+                          refreshVariant(size, "Purple");
+                          setColor("Purple");
+                        }}
                         className={`border-2 bg-purple-600 rounded-full w-6 h-6 focus:outline-none ${
                           color === "Purple"
                             ? "border-black"
@@ -248,7 +265,10 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                   {Object.keys(colorSizeSlug).includes("Maroon") &&
                     Object.keys(colorSizeSlug["Maroon"]).includes(size) && (
                       <button
-                        onClick={()=>{refreshVariant(size,'Maroon');setColor('Maroon')}}
+                        onClick={() => {
+                          refreshVariant(size, "Maroon");
+                          setColor("Maroon");
+                        }}
                         className={`border-2 bg-rose-700 rounded-full w-6 h-6 focus:outline-none ${
                           color === "Maroon"
                             ? "border-black"
@@ -256,14 +276,15 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                         }`}
                       ></button>
                     )}
-                    {Object.keys(colorSizeSlug).includes("Blue") &&
+                  {Object.keys(colorSizeSlug).includes("Blue") &&
                     Object.keys(colorSizeSlug["Blue"]).includes(size) && (
                       <button
-                        onClick={()=>{refreshVariant(size,'Blue');setColor('Blue')}}
+                        onClick={() => {
+                          refreshVariant(size, "Blue");
+                          setColor("Blue");
+                        }}
                         className={`border-2 bg-blue-500 rounded-full w-6 h-6 focus:outline-none ${
-                          color === "Blue"
-                            ? "border-black"
-                            : "border-gray-300"
+                          color === "Blue" ? "border-black" : "border-gray-300"
                         }`}
                       ></button>
                     )}
@@ -271,12 +292,29 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
                   <div className="relative">
-                    <select value={size} onChange={(e)=>{refreshVariant(e.target.value,color);setSize(e.target.value)}} className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
-                      {Object.keys(colorSizeSlug[color]).includes('S') && <option value={'S'}>S</option>}  
-                      {Object.keys(colorSizeSlug[color]).includes('M') && <option value={'M'}>M</option>}
-                      {Object.keys(colorSizeSlug[color]).includes('L') && <option value={'L'}>L</option>}
-                      {Object.keys(colorSizeSlug[color]).includes('XL') && <option value={'XL'}>XL</option>}
-                      {Object.keys(colorSizeSlug[color]).includes('XXL') && <option value={'XXL'}>XXL</option>}
+                    <select
+                      value={size}
+                      onChange={(e) => {
+                        refreshVariant(e.target.value, color);
+                        setSize(e.target.value);
+                      }}
+                      className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10"
+                    >
+                      {Object.keys(colorSizeSlug[color]).includes("S") && (
+                        <option value={"S"}>S</option>
+                      )}
+                      {Object.keys(colorSizeSlug[color]).includes("M") && (
+                        <option value={"M"}>M</option>
+                      )}
+                      {Object.keys(colorSizeSlug[color]).includes("L") && (
+                        <option value={"L"}>L</option>
+                      )}
+                      {Object.keys(colorSizeSlug[color]).includes("XL") && (
+                        <option value={"XL"}>XL</option>
+                      )}
+                      {Object.keys(colorSizeSlug[color]).includes("XXL") && (
+                        <option value={"XXL"}>XXL</option>
+                      )}
                     </select>
                     <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                       <svg
