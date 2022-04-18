@@ -33,7 +33,7 @@ import Product from "../../models/Product";
 //date - 18/08/2022
 //issue is resolved by using router.push in place of window.location
 
-const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
+const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug }) => {
   //console.log(all_Tshirts);
 
   //console.log("keys = ",Object.keys(colorSizeSlug["Red"]))
@@ -71,6 +71,8 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
     //console.log("newvaraint -", colorSizeSlug)
     router.push(url,undefined,{shallow:true});
   };
+
+
 
   return (
     <>
@@ -348,21 +350,12 @@ const Slug = ({ addToCart, all_Tshirts, colorSizeSlug }) => {
                   ₹499
                 </span>
                 <button
-                  onClick={() =>
-                    addToCart(
-                      slug,
-                      1,
-                      499,
-                      all_Tshirts[0].title,
-                      size,
-                      color
-                    )
-                  }
+                  onClick={() => addToCart(slug, 1, 499, all_Tshirts[0].title, size, color) }
                   className="flex ml-auto md:ml-24 text-sm lg:text-base text-white bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded"
                 >
                   Add to Cart
                 </button>
-                <button className="flex ml-1 md:ml-2 text-white text-sm lg:text-base bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded">
+                <button onClick={()=>{buyNow(slug, 1, 499, all_Tshirts[0].title, size, color)}} className="flex ml-1 md:ml-2 text-white text-sm lg:text-base bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded">
                   Buy Now
                 </button>
                 {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 md:ml-6">

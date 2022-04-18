@@ -78,7 +78,7 @@ const Navbar = ({ cart, subtotal, addToCart, removeFromCart, clearCart }) => {
       {/* side bar */}
       <div
         ref={ref}
-        className={`z-10 sideCart w-10/12 md:w-96 h-[100vh] absolute top-0 right-0 py-10 px-8 bg-blue-200 transform transition-transform ${
+        className={`z-10 sideCart w-10/12 md:w-96 h-[100vh] absolute top-0 right-0 py-10 px-8 bg-blue-200 overflow-y-scroll transform transition-transform ${
           Object.keys(cart).length !== 0 ? `block` : "hidden"
         } `}
       >

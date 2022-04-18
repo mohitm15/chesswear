@@ -146,8 +146,8 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
               Object.keys(cart).map((k) => {
                 return (
                   <li key={k}>
-                    <div className="flex item my-5 ">
-                      <div className=" font-semibold">{cart[k].name}</div>
+                    <div className="flex item my-5 items-center justify-between">
+                      <div className=" font-semibold">{cart[k].name} [{cart[k].variant} - {cart[k].size}]</div>
                       <div className="w-1/3 font-semibold flex items-center justify-center">
                         <AiFillPlusCircle
                           onClick={() =>
