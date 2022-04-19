@@ -3,6 +3,9 @@ import { useRouter } from "next/router";
 import mongoose from "mongoose";
 import Product from "../../models/Product";
 
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
+
 //colosizeSlug :
 //  {
 //     Black: {S: {slug: "wear-the-chess-formula-1"}},
@@ -55,9 +58,27 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug }) => {
     if (pinjson.includes(pin)) {
       setIsAvailable(true);
       //console.log("Available");
+      toast.success('Your Pincode is serviceable', {
+        position: "bottom-center",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        });
     } else {
       setIsAvailable(false);
       //console.log("NOt");
+      toast.error('Sorry! Pincode is not serviceable', {
+        position: "bottom-center",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        });
     }
   };
 
@@ -77,6 +98,18 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug }) => {
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden">
+      <ToastContainer
+        position="bottom-center"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="colored"
+        />
         <div className="container px-5 py-16 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img
@@ -302,8 +335,10 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug }) => {
                       ></button>
                     )}
                 </div>
+                
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
+                  
                   <div className="relative">
                     <select
                       value={size}

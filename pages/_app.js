@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
+import { toast } from "react-toastify";
 
 function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({});
@@ -45,6 +46,16 @@ function MyApp({ Component, pageProps }) {
     setCart(newCart);
     //console.log("newcart - ", newCart)
     saveCart(newCart);
+
+    toast.success('Item added to cart', {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      });
   };
 
   const clearCart = () => {
