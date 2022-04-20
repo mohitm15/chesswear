@@ -40,19 +40,19 @@ const Chessboards = ({ chessboards }) => {
                       </h2>
                       <p className="mt-1 text-lg">₹ {chessboards[item].price}</p>
                       <div className="mt-1 text-sm">
-                        {chessboards[item].size.includes("S") && (
+                        {chessboards[item].size.includes("10x10") && (
                           <span className="border border-gray-300 px-1 mx-1">
-                            S
+                            10x10
                           </span>
                         )}
-                        {chessboards[item].size.includes("M") && (
+                        {chessboards[item].size.includes("12x12") && (
                           <span className="border border-gray-300 px-1 mx-1">
-                            M
+                            12x12
                           </span>
                         )}
-                        {chessboards[item].size.includes("L") && (
+                        {chessboards[item].size.includes("17x17") && (
                           <span className="border border-gray-300 px-1 mx-1">
-                            L
+                            17x17
                           </span>
                         )}
                         {chessboards[item].size.includes("XL") && (
@@ -73,21 +73,13 @@ const Chessboards = ({ chessboards }) => {
                         {chessboards[item].color.includes("Black") && (
                           <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
-                        {chessboards[item].color.includes("Red") && (
-                          <button className="border-2 border-gray-300 ml-1 bg-red-600 rounded-full w-6 h-6 focus:outline-none"></button>
+                        {chessboards[item].color.includes("Brown") && (
+                          <button className="border-2 border-gray-300 ml-1 bg-rose-800 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
                         {chessboards[item].color.includes("Blue") && (
                           <button className="border-2 border-gray-300 ml-1 bg-blue-700 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
-                        {chessboards[item].color.includes("Yellow") && (
-                          <button className="border-2 border-gray-300 ml-1 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none"></button>
-                        )}
-                        {chessboards[item].color.includes("Purple") && (
-                          <button className="border-2 border-gray-300 ml-1 bg-purple-600 rounded-full w-6 h-6 focus:outline-none"></button>
-                        )}
-                        {chessboards[item].color.includes("Maroon") && (
-                          <button className="border-2 border-gray-300 ml-1 bg-pink-900 rounded-full w-6 h-6 focus:outline-none"></button>
-                        )}
+                        
                         {chessboards[item].color.includes("White") && (
                           <button className="border-2 border-gray-300 ml-1 bg-white rounded-full w-6 h-6 focus:outline-none"></button>
                         )}

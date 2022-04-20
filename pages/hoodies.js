@@ -94,6 +94,9 @@ const Hoodies = ({ hoodies }) => {
                         {hoodies[item].color.includes("Pink") && (
                           <button className="border-2 border-gray-300 ml-1 bg-pink-500 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
+                        {hoodies[item].color.includes("Gray") && (
+                          <button className="border-2 border-gray-300 ml-1 bg-gray-400 rounded-full w-6 h-6 focus:outline-none"></button>
+                        )}
                       </div>
                     </div>
                   </div>

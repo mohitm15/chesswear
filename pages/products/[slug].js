@@ -319,6 +319,30 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
                         }`}
                       ></button>
                     )}
+                    {Object.keys(colorSizeSlug).includes("Gray") &&
+                    Object.keys(colorSizeSlug["Gray"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "Gray");
+                          setColor("Gray");
+                        }}
+                        className={`border-2 ml-1 bg-gray-400 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Gray" ? "border-black" : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
+                    {Object.keys(colorSizeSlug).includes("Brown") &&
+                    Object.keys(colorSizeSlug["Brown"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "Brown");
+                          setColor("Brown");
+                        }}
+                        className={`border-2 ml-1 bg-gray-400 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Brown" ? "border-black" : "border-rose-800"
+                        }`}
+                      ></button>
+                    )}
                 </div>
                 
                 <div className="flex ml-6 items-center">
@@ -347,6 +371,16 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
                       )}
                       {Object.keys(colorSizeSlug[color]).includes("XXL") && (
                         <option value={"XXL"}>XXL</option>
+                      )}
+                      {/* chessboards sizes */}
+                      {Object.keys(colorSizeSlug[color]).includes("10x10") && (
+                        <option value={"10x10"}>10x10</option>
+                      )}
+                      {Object.keys(colorSizeSlug[color]).includes("12x12") && (
+                        <option value={"12x12"}>12x12</option>
+                      )}
+                      {Object.keys(colorSizeSlug[color]).includes("17x17") && (
+                        <option value={"17x17"}>17x17</option>
                       )}
                     </select>
                     <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
