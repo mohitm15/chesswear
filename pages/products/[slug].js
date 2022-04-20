@@ -6,37 +6,8 @@ import Product from "../../models/Product";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from "react-toastify";
 
-//colosizeSlug :
-//  {
-//     Black: {S: {slug: "wear-the-chess-formula-1"}},
-//     Blue: {M: {slug: "wear-the-chess-formula-2"}},
-//     Green: {L: {slug: "wear-the-chess-formula-3"}},
-//     Red: {XL: {slug: "wear-the-chess-think-1"} ,XXL: {slug: "wear-the-chess-think-2"}}
-//  }
 
-//allT-shirts :
-//   [
-//      {_id: "62555feae95564fbf5d9e556",title: "Men's ChessMove Tshirt",slug: "wear-the-chess-move-XXL-Black",color: "Black",category: "Tshirt", address: "IIT Indore, Indore", availableQty: 11,... } ,
-//        {....},
-//        {....},
-//        {....},
-//  ]
-
-// MY LOGS
-//date - 13-4-22
-// issue is that ki for same color I had not able to see multiple size
-// issue is that the value of color is not getting changes( somewhere i am missing setSize() and setColor()), iput it but on reloading it is getting the same value , maybe I should insert setCOlor and setsize in the button only instead of refreshVariant function.
-// abhi ke liye size same rakh kr colour change kr diye DB me
-// ek baar Jhansi se aakar video dekhna padega, but commit maar diya hai, aane ke baad refactor krenge.
-
-//date - 17-4-22
-//issue of setColor & setSize is resolved but now the window reload functon disabled. It is beacuse when the page reloads , the state value of color and size revert back to the its initial value & not the current value. That's why you can see the updated url is not displayed in chrome tab.
-
-
-//date - 18/08/2022
-//issue is resolved by using router.push in place of window.location
-
-const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug }) => {
+const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
   //console.log(all_Tshirts);
 
   //console.log("keys = ",Object.keys(colorSizeSlug["Red"]))
@@ -49,7 +20,7 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug }) => {
   const [color, setColor] = useState(all_Tshirts[0].color);
   const [size, setSize] = useState(all_Tshirts[0].size);
 
-  console.log("size =", size, " color = ", color);
+  //console.log("size =", size, " color = ", color);
 
   const checkservicibilty = async () => {
     let pins = await fetch("http://localhost:3000/api/pincode");
@@ -334,6 +305,20 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug }) => {
                         }`}
                       ></button>
                     )}
+                  {Object.keys(colorSizeSlug).includes("Pink") &&
+                    Object.keys(colorSizeSlug["Pink"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "Pink");
+                          setColor("Pink");
+                        }}
+                        className={`border-2 bg-pink-500 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Pink"
+                            ? "border-black"
+                            : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
                 </div>
                 
                 <div className="flex ml-6 items-center">
@@ -382,15 +367,15 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug }) => {
               </div>
               <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                  ₹499
+                  ₹{colorSizeSlug[color][size]["price"]}
                 </span>
                 <button
-                  onClick={() => addToCart(slug, 1, 499, all_Tshirts[0].title, size, color) }
+                  onClick={() => addToCart(slug, 1, colorSizeSlug[color][size]["price"], all_Tshirts[0].title, size, color) }
                   className="flex ml-auto md:ml-24 text-sm lg:text-base text-white bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded"
                 >
                   Add to Cart
                 </button>
-                <button onClick={()=>{buyNow(slug, 1, 499, all_Tshirts[0].title, size, color)}} className="flex ml-1 md:ml-2 text-white text-sm lg:text-base bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded">
+                <button onClick={()=>{buyNow(slug, 1, colorSizeSlug[color][size]["price"], all_Tshirts[0].title, size, color)}} className="flex ml-1 md:ml-2 text-white text-sm lg:text-base bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded">
                   Buy Now
                 </button>
                 {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 md:ml-6">
@@ -450,26 +435,129 @@ export async function getServerSideProps(context) {
   if (!mongoose.connections[0].readyState) {
     await mongoose.connect(process.env.MONGO_URI);
   }
+
   let product = await Product.findOne({ slug: context.query.slug });
-  let all_Tshirts = await Product.find({ title: product.title });
-  //all tshirts of same title with the given 'slug'
+  //jis slug ki tshirt/hhoodie click kri ,uska title vahi tshirt/hoodie aa jayenge
+  //console.log("products from slug = ",product)
+
+  let all_Tshirts = await Product.find({ title: product.title, category:product.category });
+  //ab isme uper wale title ki tshirt jise click kiya uske saare variants aa jayenge
   //console.log("all -",all_Tshirts)
   let colorSizeSlug = {};
   //eg: {'Red': {'XL':'wear-the-chess-king-1}}
   for (let item of all_Tshirts) {
     if (Object.keys(colorSizeSlug).includes(item.color)) {
-      colorSizeSlug[item.color][item.size] = { slug: item.slug, url: item.img };
+      colorSizeSlug[item.color][item.size] = { slug: item.slug, url: item.img, price: item.price };
     } else {
       colorSizeSlug[item.color] = {};
-      colorSizeSlug[item.color][item.size] = { slug: item.slug, url: item.img };
+      colorSizeSlug[item.color][item.size] = { slug: item.slug, url: item.img, price: item.price };
     }
   }
+
+  //console.log("coloSS from ssprops = ", colorSizeSlug)
   return {
     props: {
       all_Tshirts: JSON.parse(JSON.stringify(all_Tshirts)),
+      product: JSON.parse(JSON.stringify(product)),
       colorSizeSlug: JSON.parse(JSON.stringify(colorSizeSlug)),
     }, // will be passed to the page component as props
   };
 }
 
 export default Slug;
+
+
+
+// colosizeSlug :
+// {
+//  Yellow: {
+//     M: {
+//       slug: 'wear-the-chesshoodie-bts-M-Yellow',
+//       url: 'https://m.media-amazon.com/images/I/71FcDZJM0qL._UL1500_.jpg',
+//       price: 799
+//     },
+//     L: {
+//       slug: 'wear-the-chesshoodie-bts-L-Yellow',
+//       url: 'https://m.media-amazon.com/images/I/71FcDZJM0qL._UL1500_.jpg',
+//       price: 799
+//     }
+//   },
+//   Red: {
+//     L: {
+//       slug: 'wear-the-chesshoodie-bts-L-Red',
+//       url: 'https://m.media-amazon.com/images/I/81lx2pNgUCL._UL1500_.jpg',
+//       price: 799
+//     },
+//     XL: {
+//       slug: 'wear-the-chesshoodie-bts-XL-Red',
+//       url: 'https://m.media-amazon.com/images/I/81lx2pNgUCL._UL1500_.jpg',
+//       price: 799
+//     }
+//   },
+//   Pink: {
+//     L: {
+//       slug: 'wear-the-chesshoodie-bts-L-Pink',
+//       url: 'https://m.media-amazon.com/images/I/81HJNQxwNgL._UL1500_.jpg',
+//       price: 799
+//     },
+//     XL: {
+//       slug: 'wear-the-chesshoodie-bts-XL-Pink',
+//       url: 'https://m.media-amazon.com/images/I/81HJNQxwNgL._UL1500_.jpg',
+//       price: 799
+//     },
+//     XXL: {
+//       slug: 'wear-the-chesshoodie-bts-XXL-Pink',
+//       url: 'https://m.media-amazon.com/images/I/81HJNQxwNgL._UL1500_.jpg',
+//       price: 799
+//     },
+//     M: {
+//       slug: 'wear-the-chesshoodie-bts-M-Pink',
+//       url: 'https://m.media-amazon.com/images/I/81HJNQxwNgL._UL1500_.jpg',
+//       price: 798
+//     }
+//   },
+//   Blue: {
+//     L: {
+//       slug: 'wear-the-chesshoodie-bts-L-Blue',
+//       url: 'https://m.media-amazon.com/images/I/8144M-PiE5L._UL1500_.jpg',
+//       price: 799
+//     },
+//     XL: {
+//       slug: 'wear-the-chesshoodie-bts-XL-Blue',
+//       url: 'https://m.media-amazon.com/images/I/8144M-PiE5L._UL1500_.jpg',
+//       price: 799
+//     },
+//     XXL: {
+//       slug: 'wear-the-chesshoodie-bts-XXL-Blue',
+//       url: 'https://m.media-amazon.com/images/I/8144M-PiE5L._UL1500_.jpg',
+//       price: 799
+//     },
+//     M: {
+//       slug: 'wear-the-chesshoodie-bts-M-Blue',
+//       url: 'https://m.media-amazon.com/images/I/8144M-PiE5L._UL1500_.jpg',
+//       price: 799
+//     }
+//   }
+// }
+
+//allT-shirts :
+//   [
+//      {_id: "62555feae95564fbf5d9e556",title: "Men's ChessMove Tshirt",slug: "wear-the-chess-move-XXL-Black",color: "Black",category: "Tshirt", address: "IIT Indore, Indore", availableQty: 11,... } ,
+//        {....},
+//        {....},
+//        {....},
+//  ]
+
+// MY LOGS
+//date - 13-4-22
+// issue is that ki for same color I had not able to see multiple size
+// issue is that the value of color is not getting changes( somewhere i am missing setSize() and setColor()), iput it but on reloading it is getting the same value , maybe I should insert setCOlor and setsize in the button only instead of refreshVariant function.
+// abhi ke liye size same rakh kr colour change kr diye DB me
+// ek baar Jhansi se aakar video dekhna padega, but commit maar diya hai, aane ke baad refactor krenge.
+
+//date - 17-4-22
+//issue of setColor & setSize is resolved but now the window reload functon disabled. It is beacuse when the page reloads , the state value of color and size revert back to the its initial value & not the current value. That's why you can see the updated url is not displayed in chrome tab.
+
+
+//date - 18/08/2022
+//issue is resolved by using router.push in place of window.location

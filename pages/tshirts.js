@@ -13,6 +13,9 @@ const Tshirts = ({ tshirts }) => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4 justify-center">
+            
+            {Object.keys(tshirts).length === 0 && <p>Sorry! All the T-Shirts are currently out of stock. New stock coming soon! Stay tuned  </p>}
+
             {Object.keys(tshirts).map((item) => {
               return (
                 <Link
