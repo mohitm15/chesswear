@@ -38,7 +38,7 @@ const Login = () => {
       });
       setTimeout(() => {
         router.push("/");
-      }, 3000);
+      }, 2500);
     } else {
       toast.error(response.error, {
         position: "bottom-center",
