@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,10 +12,20 @@ import {
 import { BsCartCheckFill } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
 
-const Navbar = ({ cart, subtotal, addToCart, removeFromCart, clearCart }) => {
+const Navbar = ({
+  usertoken,
+  logout,
+  cart,
+  subtotal,
+  addToCart,
+  removeFromCart,
+  clearCart,
+}) => {
   //console.log({cart, subtotal, addToCart,removeFromCart, clearCart});
   //console.log(removeFromCart)
   const ref = useRef();
+  const [dropdown, setDropdown] = useState(false);
+
   const toggleCart = () => {
     if (ref.current.classList.contains("hidden")) {
       //ref.current.classList.remove("translate-x-full");
@@ -30,9 +40,10 @@ const Navbar = ({ cart, subtotal, addToCart, removeFromCart, clearCart }) => {
     }
   };
 
+
   return (
     <div className="flex flex-col md:flex-row justify-center md:justify-start items-center py-2 mb-1 shadow-md sticky z-10 top-0 bg-white">
-      <div className="logo mx-5">
+      <div className="logo  mr-auto md:mx-5">
         <Link href={"/"}>
           <a>
             <Image src="/logo.png" alt="logo" height={40} width={200} />
@@ -63,12 +74,40 @@ const Navbar = ({ cart, subtotal, addToCart, removeFromCart, clearCart }) => {
           </Link>
         </ul>
       </div>
-      <div className="cart absolute right-0 space-x-2 md:space-x-3 mx-5 top-4 cursor-pointer flex">
-        <Link href={"/login"}>
-          <a>
-            <MdAccountCircle className="text-xl md:text-3xl hover:text-blue-800" />
+      <div className="cart absolute right-0 space-x-2 md:space-x-3 mx-5 top-4 cursor-pointer flex items-center">
+        {/* dropdown */}
+        <a onMouseOver={()=>setDropdown(true)} onMouseLeave={()=>setDropdown(false)}>
+        { dropdown && <div className="absolute right-7 top-5 md:right-12 md:top-8">
+        <div id="dropdownNavbar" className=" z-10 rounded-lg w-36 md:w-44 bg-blue-200 divide-y divide-blue-900">
+                <ul className="py-1 text-sm text-gray-700 dark:text-blue-400" aria-labelledby="dropdownLargeButton">
+                  <Link href={'/myaccount'}><li><a href="#" className="block py-2 px-4 hover:bg-blue-100">My Account</a></li></Link>
+                  <Link href={'/orders'}><li><a href="#" className="block py-2 px-4 hover:bg-blue-100 ">Orders</a></li></Link>
+                </ul>
+                <div className="py-1">
+                  <li onClick={logout} className="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-100 ">Sign out</li>
+                </div>
+            </div>
+
+        </div>
+        }
+        {usertoken.value && (
+          <MdAccountCircle
+            onMouseOver={()=>setDropdown(true)}
+            onMouseLeave={()=>setDropdown(false)}
+            className="text-xl md:text-3xl hover:text-blue-800"
+          />
+        )}
           </a>
-        </Link>
+        {!usertoken.value && (
+          <Link href={"/login"}>
+            <a>
+              <button className="flex text-white bg-blue-500 border-0 py-1 px-2 focus:outline-none hover:bg-blue-600 rounded text-base">
+                Login
+              </button>
+            </a>
+          </Link>
+        )}
+
         <AiOutlineShoppingCart
           onClick={toggleCart}
           className="text-xl md:text-3xl hover:text-blue-800"

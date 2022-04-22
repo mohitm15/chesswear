@@ -8,7 +8,8 @@ import { toast } from "react-toastify";
 function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({});
   const [subtotal, setSubtotal] = useState(0);
-
+  const [usertoken, setUsertoken] = useState({value:null});
+  const [key,setKey] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
@@ -22,7 +23,13 @@ function MyApp({ Component, pageProps }) {
       console.error(err);
       localStorage.clear();
     }
-  }, []);
+
+    const token = localStorage.getItem('token');
+    if(token) {
+      setUsertoken({value:token});
+      setKey(Math.random());
+    }
+  }, [router.query]);
 
   const saveCart = (mycart) => {
     localStorage.setItem("cart", JSON.stringify(mycart));
@@ -86,9 +93,18 @@ function MyApp({ Component, pageProps }) {
     router.push('/checkout');
   }
 
+  const logout = () => {
+    localStorage.removeItem("token");
+    setUsertoken({value:null})
+    setKey(Math.random());
+  };
+
   return (
     <>
       <Navbar
+        usertoken={usertoken}
+        logout={logout}
+        key={key}
         cart={cart}
         subtotal={subtotal}
         addToCart={addToCart}
