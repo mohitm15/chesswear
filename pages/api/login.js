@@ -2,6 +2,8 @@ import connectDB from "../../middleware/mongoose";
 import User from "../../models/User";
 import { useRouter } from "next/router";
 var CryptoJS = require("crypto-js");
+var jwt = require('jsonwebtoken');
+
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
@@ -17,7 +19,8 @@ const handler = async (req, res) => {
         req.body.email === user.email &&
         req.body.password === originalPassword
       ) {
-        res.status(200).json({ success:true, name:user.name, email:user.email });
+        let token = jwt.sign({ name:user.name, email:user.email }, 'jwtsecret', {expiresIn:'2d'});
+        res.status(200).json({success:true, authToken:token});
       }
       else {
         res.status(500).json({ success:false, error:"Invalid Credentials!" });

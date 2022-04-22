@@ -22,11 +22,11 @@ const Login = () => {
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    //console.log("response - ",response);
+    console.log("response - ",response);
     setEmail("");
     setPassword("");
     if (response.success === true) {
-      //router.push("/");
+      localStorage.setItem('token',response.authToken)
       toast.success("User LoggedIn Successfully!", {
         position: "bottom-center",
         autoClose: 2000,
