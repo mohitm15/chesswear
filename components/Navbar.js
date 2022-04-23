@@ -76,7 +76,7 @@ const Navbar = ({
       </div>
       <div className="cart absolute right-0 space-x-2 md:space-x-3 mx-5 top-4 cursor-pointer flex items-center">
         {/* dropdown */}
-        <a onMouseOver={()=>setDropdown(true)} onMouseLeave={()=>setDropdown(false)}>
+        <span onMouseOver={()=>setDropdown(true)} onMouseLeave={()=>setDropdown(false)}>
         { dropdown && <div className="absolute right-7 top-5 md:right-12 md:top-8">
         <div id="dropdownNavbar" className=" z-10 rounded-lg w-36 md:w-44 bg-blue-200 divide-y divide-blue-900">
                 <ul className="py-1 text-sm text-gray-700 dark:text-blue-400" aria-labelledby="dropdownLargeButton">
@@ -97,7 +97,7 @@ const Navbar = ({
             className="text-xl md:text-3xl hover:text-blue-800"
           />
         )}
-          </a>
+          </span>
         {!usertoken.value && (
           <Link href={"/login"}>
             <a>

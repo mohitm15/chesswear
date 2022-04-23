@@ -23,7 +23,7 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
   //console.log("size =", size, " color = ", color);
 
   const checkservicibilty = async () => {
-    let pins = await fetch("http://localhost:3000/api/pincode");
+    let pins = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`);
     let pinjson = await pins.json();
     //console.log(pin, pinjson);
     if (pinjson.includes(pin)) {
