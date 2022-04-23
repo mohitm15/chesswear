@@ -97,6 +97,7 @@ function MyApp({ Component, pageProps }) {
     localStorage.removeItem("token");
     setUsertoken({value:null})
     setKey(Math.random());
+    router.push('/');
   };
 
   return (
