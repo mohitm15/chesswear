@@ -1,14 +1,74 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
+import Script from "next/script";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { MdOutlinePayment } from "react-icons/md";
 
 const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
+  
+  const initiatePayment = async () => {
+    let oid = Math.floor( Math.random()*Date.now());
+
+    //Getting transaction token
+    const data = { cart, subtotal, oid, email:"email" };
+    //console.log("data :" , data)
+    let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pretransaction`, {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+    let txnrRes= await a.json();
+    console.log(txnrRes);
+    let txnToken = txnrRes.body;
+
+    var config = {
+      root: "",
+      flow: "DEFAULT",
+      data: {
+        orderId: oid /* update order id */,
+        token: txnToken /* update token value */,
+        tokenType: "TXN_TOKEN",
+        amount: subtotal /* update amount */,
+      },
+      handler: {
+        notifyMerchant: function (eventName, data) {
+          console.log("notifyMerchant handler function called");
+          console.log("eventName => ", eventName);
+          console.log("data => ", data);
+        },
+      },
+    };
+
+    // initialze configuration using init method
+    window.Paytm.CheckoutJS.init(config)
+      .then(function onSuccess() {
+        // after successfully updating configuration, invoke JS Checkout
+        window.Paytm.CheckoutJS.invoke();
+      })
+      .catch(function onError(error) {
+        console.log("error => ", error);
+      });
+  };
+  
+
   return (
     <>
       <div className="container px-2 sm:m-auto">
+        <Head>
+          <meta
+            name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+          />
+        </Head>
+        <Script
+          type="application/javascript"
+          crossorigin="anonymous"
+          src={`${process.env.NEXT_PUBLIC_PAYTM_HOST}/merchantpgpui/checkoutjs/merchants/WcCwAR98002639044459.js`}
+        />
         <h1 className="text-xl md:text-3xl text-center my-8 font-semibold">
-          
           Checkout
         </h1>
 
@@ -147,7 +207,9 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
                 return (
                   <li key={k}>
                     <div className="flex item my-5 items-center justify-between">
-                      <div className=" font-semibold">{cart[k].name} [{cart[k].variant} - {cart[k].size}]</div>
+                      <div className=" font-semibold">
+                        {cart[k].name} [{cart[k].variant} - {cart[k].size}]
+                      </div>
                       <div className="w-1/3 font-semibold flex items-center justify-center">
                         <AiFillPlusCircle
                           onClick={() =>
@@ -185,12 +247,14 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
           </ol>
 
           <span className="subtotal text-xl font-extrabold">
-            
             Subtotal : ₹ {subtotal} /-
           </span>
         </div>
 
-        <button className="flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base mx-2  my-4">
+        <button
+          onClick={initiatePayment}
+          className="flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base mx-2  my-4"
+        >
           <MdOutlinePayment className="m-1" />
           Pay ₹ {subtotal}
         </button>
