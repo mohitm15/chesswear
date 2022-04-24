@@ -13,8 +13,12 @@ const Hoodies = ({ hoodies }) => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4 justify-center">
-
-          {Object.keys(hoodies).length === 0 && <p>Sorry! All the Hoodies are currently out of stock. New stock coming soon! Stay tuned  </p>}
+            {Object.keys(hoodies).length === 0 && (
+              <p>
+                Sorry! All the Hoodies are currently out of stock. New stock
+                coming soon! Stay tuned{" "}
+              </p>
+            )}
 
             {Object.keys(hoodies).map((item) => {
               return (

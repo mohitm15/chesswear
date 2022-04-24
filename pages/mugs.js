@@ -13,8 +13,12 @@ const Mugs = ({ mugs }) => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4 justify-center">
-
-          {Object.keys(mugs).length === 0 && <p className="text-lg tracking-wide py-44">Sorry! All the Mugs are currently out of stock. New stock coming soon! Stay tuned  </p>}
+            {Object.keys(mugs).length === 0 && (
+              <p className="text-lg tracking-wide py-44">
+                Sorry! All the Mugs are currently out of stock. New stock coming
+                soon! Stay tuned{" "}
+              </p>
+            )}
 
             {Object.keys(mugs).map((item) => {
               return (
@@ -127,10 +131,7 @@ export async function getServerSideProps(context) {
         mugs[item.title].color.push(item.color);
       }
       //pushing the new mug size in sizearray if that size is not present
-      if (
-        item.availableQty > 0 &&
-        !mugs[item.title].size.includes(item.size)
-      ) {
+      if (item.availableQty > 0 && !mugs[item.title].size.includes(item.size)) {
         mugs[item.title].size.push(item.size);
       }
     } else {

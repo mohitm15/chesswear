@@ -8,15 +8,14 @@ import { toast, ToastContainer } from "react-toastify";
 
 const Login = () => {
   const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   useEffect(() => {
-    if(localStorage.getItem('token')){
-      router.push('/');
+    if (localStorage.getItem("token")) {
+      router.push("/");
     }
-  }, [])
-  
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +32,7 @@ const Login = () => {
     setEmail("");
     setPassword("");
     if (response.success === true) {
-      localStorage.setItem('token',response.authToken)
+      localStorage.setItem("token", response.authToken);
       toast.success("User LoggedIn Successfully!", {
         position: "bottom-center",
         autoClose: 2000,

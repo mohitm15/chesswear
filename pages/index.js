@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import imgurl from "../public/img1.jpg";
 
 export default function Home() {
   return (
@@ -11,9 +9,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
       <div className="h-2/5 w-full">
-        <img src="/img1.jpg"  alt="landing_image"  />
+        <img src="/img1.jpg" alt="landing_image" />
       </div>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
@@ -177,7 +174,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
     </div>
   );
 }

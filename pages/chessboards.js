@@ -13,8 +13,12 @@ const Chessboards = ({ chessboards }) => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4 justify-center">
-
-          {Object.keys(chessboards).length === 0 && <p className="text-lg tracking-wide py-44">Sorry! All the Chessboards are currently out of stock. New stock coming soon! Stay tuned  </p>}
+            {Object.keys(chessboards).length === 0 && (
+              <p className="text-lg tracking-wide py-44">
+                Sorry! All the Chessboards are currently out of stock. New stock
+                coming soon! Stay tuned{" "}
+              </p>
+            )}
 
             {Object.keys(chessboards).map((item) => {
               return (
@@ -38,7 +42,9 @@ const Chessboards = ({ chessboards }) => {
                       <h2 className="text-gray-900 title-font text-lg font-medium">
                         {chessboards[item].title}
                       </h2>
-                      <p className="mt-1 text-lg">₹ {chessboards[item].price}</p>
+                      <p className="mt-1 text-lg">
+                        ₹ {chessboards[item].price}
+                      </p>
                       <div className="mt-1 text-sm">
                         {chessboards[item].size.includes("10x10") && (
                           <span className="border border-gray-300 px-1 mx-1">
@@ -79,7 +85,7 @@ const Chessboards = ({ chessboards }) => {
                         {chessboards[item].color.includes("Blue") && (
                           <button className="border-2 border-gray-300 ml-1 bg-blue-700 rounded-full w-6 h-6 focus:outline-none"></button>
                         )}
-                        
+
                         {chessboards[item].color.includes("White") && (
                           <button className="border-2 border-gray-300 ml-1 bg-white rounded-full w-6 h-6 focus:outline-none"></button>
                         )}

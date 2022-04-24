@@ -1,19 +1,16 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import mongoose from "mongoose";
 import Order from "../models/Order";
 import { useRouter } from "next/router";
 
 const Orders = () => {
-
   const router = useRouter();
 
-    useEffect(() => {
-      if(!localStorage.getItem('token'))
-      {
-        router.push('/')      
-      }
-    
-    }, [])
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      router.push("/");
+    }
+  }, []);
 
   return (
     <div className="container mx-auto">
@@ -103,7 +100,6 @@ const Orders = () => {
     </div>
   );
 };
-
 
 export async function getServerSideProps(context) {
   if (!mongoose.connections[0].readyState) {

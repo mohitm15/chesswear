@@ -1,14 +1,14 @@
 import React from "react";
-import Link from "next/link";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { MdOutlinePayment } from "react-icons/md";
 
-const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
+// Added payment AiOutlineGateway, but due to no merchant key, it is creating invalid checksum => hence push to different branch in both local & remote
+
+const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
   return (
     <>
       <div className="container px-2 sm:m-auto">
         <h1 className="text-xl md:text-3xl text-center my-8 font-semibold">
-          
           Checkout
         </h1>
 
@@ -147,7 +147,9 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
                 return (
                   <li key={k}>
                     <div className="flex item my-5 items-center justify-between">
-                      <div className=" font-semibold">{cart[k].name} [{cart[k].variant} - {cart[k].size}]</div>
+                      <div className=" font-semibold">
+                        {cart[k].name} [{cart[k].variant} - {cart[k].size}]
+                      </div>
                       <div className="w-1/3 font-semibold flex items-center justify-center">
                         <AiFillPlusCircle
                           onClick={() =>
@@ -185,7 +187,6 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
           </ol>
 
           <span className="subtotal text-xl font-extrabold">
-            
             Subtotal : ₹ {subtotal} /-
           </span>
         </div>

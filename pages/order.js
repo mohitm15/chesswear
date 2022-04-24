@@ -1,6 +1,6 @@
 import React from "react";
 
-const Order = ({cart, subtotal}) => {
+const Order = ({ subtotal }) => {
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
@@ -13,38 +13,43 @@ const Order = ({cart, subtotal}) => {
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">
                 Order Id: 2242434535
               </h1>
-              
+
               <p className="leading-relaxed mb-4 text-green-700 rounded-3xl bg-green-100 hover:bg-green-100/70 p-3 border-[1px] border-green-700 inline-flex items-center justify-center ">
                 Your Order has been successfully placed !
               </p>
               <div className="flex mb-4 justify-evenly">
-          <a className="flex-grow  py-2 text-lg px-1">Description</a>
-          <a className="flex-grow  py-2 text-lg px-1">Quantity</a>
-          <a className="flex-grow  py-2 text-lg px-1">Price</a>
-        </div>
+                <a className="flex-grow  py-2 text-lg px-1">Description</a>
+                <a className="flex-grow  py-2 text-lg px-1">Quantity</a>
+                <a className="flex-grow  py-2 text-lg px-1">Price</a>
+              </div>
               <div className="flex border-t border-gray-200 py-2">
-                <span className="text-gray-500">Chess Formula T-Shirt (XL - Black)</span>
+                <span className="text-gray-500">
+                  Chess Formula T-Shirt (XL - Black)
+                </span>
                 <span className="ml-auto text-gray-900">01</span>
                 <span className="ml-auto text-gray-900">₹ 499</span>
               </div>
               <div className="flex border-t border-gray-200 py-2">
-              <span className="text-gray-500">Chess Formula T-Shirt (XL - Black)</span>
+                <span className="text-gray-500">
+                  Chess Formula T-Shirt (XL - Black)
+                </span>
                 <span className="ml-auto text-gray-900">01</span>
                 <span className="ml-auto text-gray-900">₹ 499</span>
               </div>
               <div className="flex border-t border-b mb-6 border-gray-200 py-2">
-              <span className="text-gray-500">Chess Formula T-Shirt (XL - Black)</span>
+                <span className="text-gray-500">
+                  Chess Formula T-Shirt (XL - Black)
+                </span>
                 <span className="ml-auto text-gray-900">01</span>
                 <span className="ml-auto text-gray-900">₹ 499</span>
               </div>
               <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                Subtotal : ₹ {subtotal} /-
+                  Subtotal : ₹ {subtotal} /-
                 </span>
                 <button className="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
                   Track Order
                 </button>
-                
               </div>
             </div>
             <img
