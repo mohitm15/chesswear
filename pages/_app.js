@@ -97,7 +97,7 @@ function MyApp({ Component, pageProps }) {
     let newCart = { itemcode: { qty, price, name, size, variant } };
     setCart(newCart);
     saveCart(newCart);
-    console.log("newcart - ", newCart);
+    //console.log("newcart - ", newCart);
     router.push("/checkout");
   };
 

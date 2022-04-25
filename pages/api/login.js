@@ -11,7 +11,7 @@ const handler = async (req, res) => {
       email: req.body.email,
     });
     //console.log("User founded from DB = ", user);
-    const bytes = CryptoJS.AES.decrypt(user.password, "mohit123");
+    const bytes = CryptoJS.AES.decrypt(user.password, process.env.AES_ENCRYPT );
     const originalPassword = bytes.toString(CryptoJS.enc.Utf8);
     if (user) {
       if (
@@ -20,7 +20,7 @@ const handler = async (req, res) => {
       ) {
         let token = jwt.sign(
           { name: user.name, email: user.email },
-          "jwtsecret",
+          process.env.JWT_SECRET,
           { expiresIn: "2d" }
         );
         res.status(200).json({ success: true, authToken: token });

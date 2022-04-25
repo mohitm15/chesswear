@@ -1,13 +1,104 @@
-import React from "react";
+import React,{useState} from "react";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { MdOutlinePayment } from "react-icons/md";
-
+import { useRouter } from "next/router";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
 // Added payment AiOutlineGateway, but due to no merchant key, it is creating invalid checksum => hence push to different branch in both local & remote
 
 const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [address, setAddress] = useState('');
+  const [pincode, setPincode] = useState('');
+
+  const [city, setCity] = useState('');
+  const [statemap, setStatemap] = useState('');
+
+  const [disable, setDisable] = useState(true);
+
+  const router = useRouter();
+
+  const handleChange = (e) => {
+    if(e.target.name ===  "name") {
+      setName(e.target.value);
+    }
+    else if(e.target.name ===  "email") {
+      setEmail(e.target.value);
+    }
+    else if(e.target.name ===  "phone") {
+      setPhone(e.target.value);
+    }
+    else if(e.target.name ===  "address") {
+      setAddress(e.target.value);
+    }
+    else if(e.target.name ===  "pincode") {
+      setPincode(e.target.value);
+    }
+
+    if(name && email && phone && address && pincode)
+      setDisable(false) 
+    else
+      setDisable(true)
+  }
+
+  const initiateOrder = async () => {
+    let oid = Math.floor(Math.random()*Date.now())
+    const data = { cart:cart, subtotal:subtotal, oid:oid, email:email, name:name, address:address, pincode:pincode, phone:phone  };
+    console.log(JSON.stringify(data))
+    let res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addorder`, {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    let response = await res.json();
+    console.log("response from order- ",response);
+    if (response.success === true) {
+      localStorage.setItem("token", response.authToken);
+      toast.success("Order Added Successfully!", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      setTimeout(() => {
+        router.push('/order');
+      }, 2500);
+    } else {
+      toast.error("Error in Adding Order", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }
+
+
   return (
     <>
       <div className="container px-2 sm:m-auto">
+      <ToastContainer
+          position="bottom-center"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <h1 className="text-xl md:text-3xl text-center my-8 font-semibold">
           Checkout
         </h1>
@@ -24,7 +115,9 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
               <input
                 type="name"
                 id="name"
-                name="name  "
+                name="name"
+                value={name}
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -41,6 +134,8 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
                 type="email"
                 id="email"
                 name="email"
+                value={email}
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -59,6 +154,8 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
             <textarea
               id="address"
               name="address"
+              value={address}
+              onChange={handleChange}
               className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -77,19 +174,27 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
                 type="text"
                 id="phone"
                 name="phone"
+                value={phone}
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
+          {/* city */}
           <div className="px-2 w-1/2">
-            <div className=" mb-4">
-              <label htmlFor="city" className="leading-7 text-sm text-gray-600">
-                City
+          <div className=" mb-4">
+              <label
+                htmlFor="pincode"
+                className="leading-7 text-sm text-gray-600"
+              >
+                Pincode
               </label>
               <input
                 type="text"
-                id="city"
-                name="city"
+                id="pincode"
+                name="pincode"
+                value={pincode}
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -109,23 +214,25 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
                 type="text"
                 id="state"
                 name="state"
+                value={statemap}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                readOnly={true}
               />
             </div>
           </div>
           <div className="px-2 w-1/2">
+            
             <div className=" mb-4">
-              <label
-                htmlFor="pincode"
-                className="leading-7 text-sm text-gray-600"
-              >
-                Pincode
+              <label htmlFor="city" className="leading-7 text-sm text-gray-600">
+                City
               </label>
               <input
                 type="text"
-                id="pincode"
-                name="pincode"
+                id="city"
+                name="city"
+                value={city}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                readOnly={true}
               />
             </div>
           </div>
@@ -191,7 +298,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
           </span>
         </div>
 
-        <button className="flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base mx-2  my-4">
+        <button disabled={disable} onClick={initiateOrder} className="disabled:bg-blue-300 flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base mx-2  my-4">
           <MdOutlinePayment className="m-1" />
           Pay ₹ {subtotal}
         </button>

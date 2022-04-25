@@ -9,7 +9,7 @@ const handler = async (req, res) => {
     let newUser = new User({
       name,
       email,
-      password: CryptoJS.AES.encrypt(req.body.password, "mohit123").toString(),
+      password: CryptoJS.AES.encrypt(req.body.password, process.env.AES_ENCRYPT ).toString(),
     });
     await newUser.save();
     res.status(200).json({ res: "Successfully User added" });
