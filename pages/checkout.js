@@ -20,7 +20,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
 
   const router = useRouter();
 
-  const handleChange = (e) => {
+  const handleChange = async (e) => {
     if (e.target.name === "name") {
       setName(e.target.value);
     } else if (e.target.name === "email") {
@@ -31,10 +31,33 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
       setAddress(e.target.value);
     } else if (e.target.name === "pincode") {
       setPincode(e.target.value);
+      if (e.target.value.length == 6) {
+        let pins = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`);
+        let pinjson = await pins.json();
+        //console.log(pinjson)
+        if (Object.keys(pinjson).includes(e.target.value)) {
+          setCity(pinjson[e.target.value][0]);
+          setStatemap(pinjson[e.target.value][1]);
+        } else {
+          setCity("");
+          setStatemap("");
+        }
+      } else {
+        setCity("");
+        setStatemap("");
+      }
     }
 
     if (name && email && phone && address && pincode) setDisable(false);
     else setDisable(true);
+
+    // if(pincode) {
+    //   let pinjson = await fetch(`https://api.postalpincode.in/pincode/${pincode}`);
+    //   let pinres = await pinjson.json();
+    //   console.log("pinres =",pinres.PostOffice[0].Region || "Madhya Pradesh");
+    //   setCity(pinres.PostOffice[0].Region || "Madhya Pradesh");
+    //   setStatemap(pinres.PostOffice[0].State || "Bhopal")
+    // }
   };
 
   const initiateOrder = async () => {
@@ -217,7 +240,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
                 name="state"
                 value={statemap}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                readOnly={true}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -232,7 +255,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
                 name="city"
                 value={city}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                readOnly={true}
+                onChange={handleChange}
               />
             </div>
           </div>

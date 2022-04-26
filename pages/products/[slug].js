@@ -25,8 +25,8 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
   const checkservicibilty = async () => {
     let pins = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`);
     let pinjson = await pins.json();
-    //console.log(pin, pinjson);
-    if (pinjson.includes(pin)) {
+    //console.log( pinjson);
+    if (Object.keys(pinjson).includes(pin)) {
       setIsAvailable(true);
       //console.log("Available");
       toast.success('Your Pincode is serviceable', {
