@@ -4,8 +4,8 @@ const OrderSchema = new mongoose.Schema(
   {
     email: { type: String, required: true },
     orderId: { type: String, required: true },
-    paymentInfo: { type: String, default:"No payment info" },
-    products: {type:Object, required:true},
+    paymentInfo: { type: String, default: "No payment info" },
+    products: { type: Object, required: true },
     address: { type: String, required: true },
     subtotal: { type: Number, required: true },
     status: { type: String, required: true, default: "Pending" },

@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { MdOutlinePayment } from "react-icons/md";
 import { useRouter } from "next/router";
@@ -7,47 +7,49 @@ import { toast, ToastContainer } from "react-toastify";
 // Added payment AiOutlineGateway, but due to no merchant key, it is creating invalid checksum => hence push to different branch in both local & remote
 
 const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [pincode, setPincode] = useState("");
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
-  const [pincode, setPincode] = useState('');
-
-  const [city, setCity] = useState('');
-  const [statemap, setStatemap] = useState('');
+  const [city, setCity] = useState("");
+  const [statemap, setStatemap] = useState("");
 
   const [disable, setDisable] = useState(true);
 
   const router = useRouter();
 
   const handleChange = (e) => {
-    if(e.target.name ===  "name") {
+    if (e.target.name === "name") {
       setName(e.target.value);
-    }
-    else if(e.target.name ===  "email") {
+    } else if (e.target.name === "email") {
       setEmail(e.target.value);
-    }
-    else if(e.target.name ===  "phone") {
+    } else if (e.target.name === "phone") {
       setPhone(e.target.value);
-    }
-    else if(e.target.name ===  "address") {
+    } else if (e.target.name === "address") {
       setAddress(e.target.value);
-    }
-    else if(e.target.name ===  "pincode") {
+    } else if (e.target.name === "pincode") {
       setPincode(e.target.value);
     }
 
-    if(name && email && phone && address && pincode)
-      setDisable(false) 
-    else
-      setDisable(true)
-  }
+    if (name && email && phone && address && pincode) setDisable(false);
+    else setDisable(true);
+  };
 
   const initiateOrder = async () => {
-    let oid = Math.floor(Math.random()*Date.now())
-    const data = { cart:cart, subtotal:subtotal, oid:oid, email:email, name:name, address:address, pincode:pincode, phone:phone  };
-    console.log(JSON.stringify(data))
+    let oid = Math.floor(Math.random() * Date.now());
+    const data = {
+      cart: cart,
+      subtotal: subtotal,
+      oid: oid,
+      email: email,
+      name: name,
+      address: address,
+      pincode: pincode,
+      phone: phone,
+    };
+    //console.log(JSON.stringify(data));
     let res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addorder`, {
       method: "POST", // or 'PUT'
       headers: {
@@ -56,7 +58,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    console.log("response from order- ",response);
+    //console.log("response from order- ", response);
     if (response.success === true) {
       localStorage.setItem("token", response.authToken);
       toast.success("Order Added Successfully!", {
@@ -69,7 +71,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
         progress: undefined,
       });
       setTimeout(() => {
-        router.push('/order');
+        router.push("/order");
       }, 2500);
     } else {
       toast.error("Error in Adding Order", {
@@ -82,13 +84,12 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
         progress: undefined,
       });
     }
-  }
-
+  };
 
   return (
     <>
       <div className="container px-2 sm:m-auto">
-      <ToastContainer
+        <ToastContainer
           position="bottom-center"
           autoClose={2000}
           hideProgressBar={false}
@@ -182,7 +183,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
           </div>
           {/* city */}
           <div className="px-2 w-1/2">
-          <div className=" mb-4">
+            <div className=" mb-4">
               <label
                 htmlFor="pincode"
                 className="leading-7 text-sm text-gray-600"
@@ -221,7 +222,6 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
             </div>
           </div>
           <div className="px-2 w-1/2">
-            
             <div className=" mb-4">
               <label htmlFor="city" className="leading-7 text-sm text-gray-600">
                 City
@@ -298,7 +298,11 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
           </span>
         </div>
 
-        <button disabled={disable} onClick={initiateOrder} className="disabled:bg-blue-300 flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base mx-2  my-4">
+        <button
+          disabled={disable}
+          onClick={initiateOrder}
+          className="disabled:bg-blue-300 flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base mx-2  my-4"
+        >
           <MdOutlinePayment className="m-1" />
           Pay ₹ {subtotal}
         </button>
