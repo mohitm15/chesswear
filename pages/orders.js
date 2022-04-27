@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import Order from "../models/Order";
 import { useRouter } from "next/router";
 
-const Orders = () => {
+const Orders = ({ orders }) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -12,6 +12,14 @@ const Orders = () => {
     }
   }, []);
 
+  //console.log("yo = ",orders)
+
+  for (let item in orders) {
+    //console.log("i = ",orders[item].createdAt)
+    orders[item].createdAt = orders[item].createdAt.slice(0, 10);
+    //item.createdAt = new Date(createdAt.getHighBits()*1000);
+  }
+  //console.log("yo = ",orders)
   return (
     <div className="container mx-auto">
       <h1 className="font-bold text-center text-2xl p-8">My Orders</h1>
@@ -26,71 +34,66 @@ const Orders = () => {
                       scope="col"
                       className="text-sm font-medium  px-6 py-4 text-left"
                     >
-                      #
+                      S.No.
                     </th>
                     <th
                       scope="col"
                       className="text-sm font-medium  px-6 py-4 text-left"
                     >
-                      First
+                      OrderID
                     </th>
                     <th
                       scope="col"
                       className="text-sm font-medium  px-6 py-4 text-left"
                     >
-                      Last
+                      Item
                     </th>
                     <th
                       scope="col"
                       className="text-sm font-medium  px-6 py-4 text-left"
                     >
-                      Handle
+                      Date
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-sm font-medium  px-6 py-4 text-left"
+                    >
+                      Amount Paid
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      1
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Mark
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Otto
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      @mdo
-                    </td>
-                  </tr>
-                  <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      2
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Jacob
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Thornton
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      @fat
-                    </td>
-                  </tr>
-                  <tr className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      3
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Larry
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      Wild
-                    </td>
-                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                      @twitter
-                    </td>
-                  </tr>
+                  {Object.values(orders).map((item) => {
+                    //console.log(item)
+                    return (
+                      <tr
+                        key={item._id}
+                        className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100"
+                      >
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          1
+                        </td>
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          {item.orderId}
+                        </td>
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          {Object.keys(item.products).map((itemitem) => {
+                            return (
+                              <ol key={itemitem}>
+                                <li className="mb-2">{itemitem}</li>
+                              </ol>
+                            );
+                          })}
+                        </td>
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          {item.createdAt}
+                        </td>
+                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                          ₹ {item.subtotal} /-
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
@@ -107,9 +110,9 @@ export async function getServerSideProps(context) {
   }
 
   let orders = await Order.find({});
-
+  //console.log("got = ", orders);
   return {
-    props: { orders: orders }, // will be passed to the page component as props
+    props: { orders: JSON.parse(JSON.stringify(orders)) }, // will be passed to the page component as props
   };
 }
 
