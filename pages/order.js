@@ -1,7 +1,13 @@
 import React from "react";
+import mongoose from "mongoose";
+import Order from "../models/Order";
 
-const Order = ({ cart, subtotal }) => {
-  //console.log(cart);
+//TODO: To change the orderdetail fecthing resource from cart,subtotal to orders DB (user specific orders)
+
+const MyOrder = ({ order }) => {
+  console.log("order = ",order)
+  const products = order.products;
+  console.log(order,products);
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
@@ -59,4 +65,16 @@ const Order = ({ cart, subtotal }) => {
   );
 };
 
-export default Order;
+export async function getServerSideProps(context) {
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGO_URI);
+  }
+
+  let order = await Order.findById(context.query.id)
+  console.log("got = ", order);
+  return {
+    props: { order: JSON.parse(JSON.stringify(order)) }, // will be passed to the page component as props
+  };
+}
+
+export default MyOrder;

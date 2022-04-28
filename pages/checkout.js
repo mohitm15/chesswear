@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 // Added payment AiOutlineGateway, but due to no merchant key, it is creating invalid checksum => hence push to different branch in both local & remote
 
-const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
+const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -97,7 +97,9 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
         router.push("/order");
       }, 2500);
     } else {
-      if(response.error === "err1"){
+      
+      clearCart();
+      if(response.error === "err1"){  
         toast.error("Total price of your cart have changed accidently", {
           position: "bottom-center",
           autoClose: 2000,
@@ -109,7 +111,18 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
         });
       }
       else if(response.error === "err2"){
-        toast.error("Prices of some of the items in your cart have changed", {
+        toast.error("Some items in your cart went out of stock !", {
+          position: "bottom-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+      else if(response.error === "err5"){
+        toast.error("Prices of some of the items in your cart have changed !", {
           position: "bottom-center",
           autoClose: 2000,
           hideProgressBar: false,
@@ -120,7 +133,7 @@ const Checkout = ({ cart, subtotal, addToCart, removeFromCart }) => {
         });
       }
       else {
-        toast.error("Error in Adding Order", {
+        toast.error("Error in Adding Order !", {
           position: "bottom-center",
           autoClose: 2000,
           hideProgressBar: false,
