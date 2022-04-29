@@ -1,13 +1,17 @@
 import React from "react";
 import mongoose from "mongoose";
 import Order from "../models/Order";
+import { useRouter } from "next/router";
 
-//TODO: To change the orderdetail fecthing resource from cart,subtotal to orders DB (user specific orders)
+//TODO: To change the orderdetail fecthing resource from order,subtotal to orders DB (user specific orders)
 
 const MyOrder = ({ order }) => {
-  console.log("order = ",order)
-  const products = order.products;
-  console.log(order,products);
+
+  // const router = useRouter();
+  // const {id} = router.query;
+  // console.log(id);
+  //console.log("order = ",order)
+
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
@@ -18,7 +22,7 @@ const MyOrder = ({ order }) => {
                 CHESSWEAR.COM
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">
-                Order Id: 2242434535
+                 { `Order Id: ${order.orderId}`}
               </h1>
 
               <p className="leading-relaxed mb-4 text-green-700 rounded-3xl bg-green-100 hover:bg-green-100/70 p-3 border-[1px] border-green-700 inline-flex items-center justify-center ">
@@ -29,24 +33,24 @@ const MyOrder = ({ order }) => {
                 <a className="flex-grow  py-2 text-lg px-1">Quantity</a>
                 <a className="flex-grow  py-2 text-lg px-1">Price</a>
               </div>
-              {Object.keys(cart).map((key) => {
+              {Object.keys(order.products).map((key) => {
                 return (
                   <div key={key} className="flex border-t border-gray-200 py-2">
                     <span className="text-gray-500 w-28 ">
-                      {cart[key].name} ({cart[key].size} - {cart[key].variant})
+                      {order.products[key].name} ({order.products[key].size} - {order.products[key].variant} )
                     </span>
                     <span className="m-auto text-gray-900">
-                      {cart[key].qty}
+                    {order.products[key].qty}
                     </span>
                     <span className="mr-auto mt-auto mb-auto text-gray-900">
-                     ₹ {cart[key].price}
+                     ₹ {order.products[key].price}
                     </span>
                   </div>
                 );
-              })}
+              })} 
               <div className="flex py-2 md:py-4">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                  Subtotal :  <span className="ml-4 text-red-900 font-bold text-3xl leading-tight">₹ {subtotal} /-</span>
+                  Subtotal :  <span className="ml-4 text-red-900 font-bold text-3xl leading-tight">₹ {order.subtotal} /-</span>
                 </span>
                 <button className="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
                   Track Order

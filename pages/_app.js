@@ -94,7 +94,8 @@ function MyApp({ Component, pageProps }) {
 
   const buyNow = (itemcode, qty, price, name, size, variant) => {
     saveCart({});
-    let newCart = { itemcode: { qty, price, name, size, variant } };
+    let newCart = {};
+    newCart[itemcode] = { qty, price, name, size, variant } ;
     setCart(newCart);
     saveCart(newCart);
     //console.log("newcart - ", newCart);

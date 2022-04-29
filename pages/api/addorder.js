@@ -44,8 +44,8 @@ const handler = async (req, res) => {
     await orderToAdd.save();
 
     let ordered_products = orderToAdd.products;
-    console.log("Orederd pro = ", ordered_products);
-    console.log("complete order = ", )
+    //console.log("Orederd pro = ", ordered_products);
+    //console.log("complete order = ", orderToAdd)
     for (let slug in ordered_products) {
       await Product.findOneAndUpdate(
         { slug: slug },
@@ -53,8 +53,8 @@ const handler = async (req, res) => {
       );
     }
 
-    // res.status(200).json({ success: true });
-    res.redirect('/order?id=?clearCart=1' + orderToAdd._id, 200)
+    res.status(200).json({ success: true ,orderToAdd});
+    //res.redirect('/order?id=' + orderToAdd._id, 200)
   } else {
     // Handle any other HTTP method
     res.status(400).json({ success: false });

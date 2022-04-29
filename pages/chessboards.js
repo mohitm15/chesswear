@@ -4,7 +4,7 @@ import Product from "../models/Product";
 import mongoose from "mongoose";
 
 const Chessboards = ({ chessboards }) => {
-  console.log(chessboards);
+  //console.log(chessboards);
 
   // chessboards { 'chessbtschessboard': {complete obj } , 'kingchess': {complete obj } ..}
 
