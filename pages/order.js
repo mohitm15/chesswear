@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import Order from "../models/Order";
 import { useRouter } from "next/router";
 
-//TODO: To change the orderdetail fecthing resource from order,subtotal to orders DB (user specific orders)
 
 const MyOrder = ({ order }) => {
 
@@ -60,7 +59,7 @@ const MyOrder = ({ order }) => {
             <img
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://dummyimage.com/400x400"
+              src="thank.png"
             />
           </div>
         </div>
