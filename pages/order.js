@@ -58,7 +58,7 @@ const MyOrder = ({ order }) => {
             </div>
             <img
               alt="ecommerce"
-              className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+              className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-bottom rounded"
               src="thank.png"
             />
           </div>
@@ -74,7 +74,7 @@ export async function getServerSideProps(context) {
   }
 
   let order = await Order.findById(context.query.id)
-  console.log("got = ", order);
+  //console.log("got = ", order);
   return {
     props: { order: JSON.parse(JSON.stringify(order)) }, // will be passed to the page component as props
   };

@@ -81,7 +81,7 @@ const Navbar = ({
         <div id="dropdownNavbar" className=" z-10 rounded-lg w-36 md:w-44 bg-blue-200 divide-y divide-blue-900">
                 <ul className="py-1 text-sm text-gray-700 dark:text-blue-400" aria-labelledby="dropdownLargeButton">
                   <Link href={'/myaccount'}><li><a href="#" className="block py-2 px-4 hover:bg-blue-100">My Account</a></li></Link>
-                  <Link href={'/orders'}><li><a href="#" className="block py-2 px-4 hover:bg-blue-100 ">Orders</a></li></Link>
+                  <Link href={'/orders'}><li><a href="#" className="block py-2 px-4 hover:bg-blue-100 "> My Orders</a></li></Link>
                 </ul>
                 <div className="py-1">
                   <li onClick={logout} className="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-100 ">Sign out</li>
