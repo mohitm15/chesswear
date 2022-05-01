@@ -6,7 +6,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 // Added payment AiOutlineGateway, but due to no merchant key, it is creating invalid checksum => hence push to different branch in both local & remote
 
-const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
+const Checkout = ({
+  cart,
+  clearCart,
+  subtotal,
+  addToCart,
+  removeFromCart,
+  usertoken,
+}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -20,7 +27,29 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
 
   const router = useRouter();
 
+  //decrypting jwt token
+  function parseJwt(token) {
+    var base64Url = token.split(".")[1];
+    var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+    var jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split("")
+        .map(function (c) {
+          return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join("")
+    );
+    return JSON.parse(jsonPayload);
+  }
+
   const handleChange = async (e) => {
+    //console.log("user",usertoken)
+
+    let userdetails = parseJwt(usertoken.value);
+    setEmail(userdetails.email);
+
+    
+    //handlechange
     if (e.target.name === "name") {
       setName(e.target.value);
     } else if (e.target.name === "email") {
@@ -97,9 +126,8 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
         router.push(`/order?id=${response.orderToAdd._id}&clearCart=1`);
       }, 2500);
     } else {
-      
       clearCart();
-      if(response.error === "err1"){  
+      if (response.error === "err1") {
         toast.error("Total price of your cart have changed accidently", {
           position: "bottom-center",
           autoClose: 2000,
@@ -109,8 +137,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
           draggable: true,
           progress: undefined,
         });
-      }
-      else if(response.error === "err2"){
+      } else if (response.error === "err2") {
         toast.error("Some items in your cart went out of stock !", {
           position: "bottom-center",
           autoClose: 2000,
@@ -120,8 +147,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
           draggable: true,
           progress: undefined,
         });
-      }
-      else if(response.error === "err5"){
+      } else if (response.error === "err5") {
         toast.error("Prices of some of the items in your cart have changed !", {
           position: "bottom-center",
           autoClose: 2000,
@@ -131,8 +157,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
           draggable: true,
           progress: undefined,
         });
-      }
-      else {
+      } else {
         toast.error("Error in Adding Order !", {
           position: "bottom-center",
           autoClose: 2000,
@@ -198,6 +223,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
                 value={email}
                 onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                readOnly
               />
             </div>
           </div>

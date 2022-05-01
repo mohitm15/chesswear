@@ -107,7 +107,7 @@ const Orders = () => {
                             })}
                           </td>
                           <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            {item.createdAt}
+                            {item.createdAt.slice(0,10)}
                           </td>
                           <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                             ₹ {item.subtotal} /-
