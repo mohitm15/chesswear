@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
     }
 
     const token = localStorage.getItem("token");
-    if (token) {
+    if (token != null) {
       setUsertoken({ value: token });
       setKey(Math.random());
     }
@@ -51,27 +51,43 @@ function MyApp({ Component, pageProps }) {
   };
 
   const addToCart = (itemcode, qty, price, name, size, variant) => {
-    let newCart = cart;
-    //console.log("added")
-    if (itemcode in cart) {
-      //console.log("alredy present")
-      newCart[itemcode].qty = cart[itemcode].qty + qty;
-    } else {
-      newCart[itemcode] = { qty: 1, price, name, size, variant };
-    }
-    setCart(newCart);
-    //console.log("newcart - ", newCart)
-    saveCart(newCart);
+    if (localStorage.getItem("token")) {
+      let newCart = cart;
+      //console.log("added")
+      if (itemcode in cart) {
+        //console.log("alredy present")
+        newCart[itemcode].qty = cart[itemcode].qty + qty;
+      } else {
+        newCart[itemcode] = { qty: 1, price, name, size, variant };
+      }
+      setCart(newCart);
+      //console.log("newcart - ", newCart)
+      saveCart(newCart);
 
-    toast.success("Item added to cart", {
-      position: "top-right",
-      autoClose: 1500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-    });
+      toast.success("Item added to cart", {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+    else {
+      toast.error("Kindly Login before adding items to the cart", {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
+      setTimeout(() => {
+        router.push("/login");
+      }, 2500);
+    }
   };
 
   const clearCart = () => {
@@ -93,20 +109,47 @@ function MyApp({ Component, pageProps }) {
   };
 
   const buyNow = (itemcode, qty, price, name, size, variant) => {
-    saveCart({});
-    let newCart = {};
-    newCart[itemcode] = { qty, price, name, size, variant } ;
-    setCart(newCart);
-    saveCart(newCart);
-    //console.log("newcart - ", newCart);
-    router.push("/checkout");
+    if(localStorage.getItem('token')) {
+      saveCart({});
+      let newCart = {};
+      newCart[itemcode] = { qty, price, name, size, variant };
+      setCart(newCart);
+      saveCart(newCart);
+      //console.log("newcart - ", newCart);
+      router.push("/checkout");
+    }
+    else {
+      toast.error("Kindly Login before buying your selected item.", {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
+      setTimeout(() => {
+        router.push("/login");
+      }, 2500);
+    }
   };
 
   const logout = () => {
     localStorage.removeItem("token");
+    toast.success("Logged Out Successfully !", {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+    setTimeout(() => {
+      router.push("/");
+    }, 2500);
     setUsertoken({ value: null });
     setKey(Math.random());
-    router.push("/");
   };
 
   return (
@@ -130,6 +173,7 @@ function MyApp({ Component, pageProps }) {
       />
       <Component
         cart={cart}
+        usertoken={usertoken}
         subtotal={subtotal}
         addToCart={addToCart}
         removeFromCart={removeFromCart}

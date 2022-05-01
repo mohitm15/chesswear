@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import {
   AiOutlineShoppingCart,
@@ -11,6 +12,7 @@ import {
 } from "react-icons/ai";
 import { BsCartCheckFill } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const Navbar = ({
   usertoken,
@@ -23,10 +25,12 @@ const Navbar = ({
 }) => {
   //console.log({cart, subtotal, addToCart,removeFromCart, clearCart});
   //console.log(removeFromCart)
+  const router = useRouter();
   const ref = useRef();
   const [dropdown, setDropdown] = useState(false);
 
   const toggleCart = () => {
+    if(localStorage.getItem('token')) {
     if (ref.current.classList.contains("hidden")) {
       //ref.current.classList.remove("translate-x-full");
       ref.current.classList.remove("hidden");
@@ -38,6 +42,21 @@ const Navbar = ({
       //ref.current.classList.add("translate-x-full");
       ref.current.classList.add("hidden");
     }
+  }
+  else {
+    toast.error("Kindly Login before creating the cart", {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+    setTimeout(() => {
+      router.push("/login");
+    }, 2500);
+  }
   };
 
 

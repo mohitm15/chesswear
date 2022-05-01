@@ -94,7 +94,7 @@ const Checkout = ({ cart, clearCart, subtotal, addToCart, removeFromCart }) => {
         progress: undefined,
       });
       setTimeout(() => {
-        router.push(`/order?id=${response.orderToAdd._id}`);
+        router.push(`/order?id=${response.orderToAdd._id}&clearCart=1`);
       }, 2500);
     } else {
       
