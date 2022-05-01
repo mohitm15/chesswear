@@ -201,14 +201,15 @@ const Navbar = ({
         </div>
         <div className="mt-5 flex flex-row justify-center space-x-4">
           <Link href={"/checkout"}>
-            <button className="flex  text-white bg-blue-500 border-0 py-2 px-4 focus:outline-none hover:bg-blue-600 rounded text-base">
+            <button disabled={Object.keys(cart).length === 0 ? true: false} className="flex  text-white bg-blue-500 border-0 py-2 px-4 focus:outline-none hover:bg-blue-600 rounded text-base disabled:bg-blue-300">
               <BsCartCheckFill className="m-1" />
               Checkout
             </button>
           </Link>
           <button
+            disabled={Object.keys(cart).length === 0 ? true: false}
             onClick={clearCart}
-            className="flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base"
+            className="flex text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-blue-600 rounded text-base disabled:bg-blue-300"
           >
             <AiOutlineClear className="m-1" />
             Clear Cart

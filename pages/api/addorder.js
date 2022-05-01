@@ -33,6 +33,22 @@ const handler = async (req, res) => {
     }
 
     //TODO3: check if details are valid or not
+    //subtotal detail
+    if(req.body.subtotal <= 0) {
+      res.status(500).json({ success: false, error: "err6" });
+      return;
+    }
+
+    if(req.body.phone.length != 10 || !Number.isInteger(req.body.phone)) {
+      res.status(500).json({ success: false, error: "err7" });
+      return;
+    }
+
+    if(req.body.pincode.length != 6 || !Number.isInteger(req.body.pincode)) {
+      res.status(500).json({ success: false, error: "err8" });
+      return;
+    }
+
     let orderToAdd = new Order({
       email: req.body.email,
       orderId: req.body.oid,

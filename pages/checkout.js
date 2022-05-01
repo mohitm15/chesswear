@@ -48,7 +48,6 @@ const Checkout = ({
     let userdetails = parseJwt(usertoken.value);
     setEmail(userdetails.email);
 
-    
     //handlechange
     if (e.target.name === "name") {
       setName(e.target.value);
@@ -157,7 +156,40 @@ const Checkout = ({
           draggable: true,
           progress: undefined,
         });
-      } else {
+      } else if (response.error === "err6") {
+        toast.error("Cart is Empty! Fill your cart and Try again!", {
+          position: "bottom-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+      else if (response.error === "err7") {
+        toast.error("Phone number should be in 10 digits & numeric", {
+          position: "bottom-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } 
+      else if (response.error === "err8") {
+        toast.error("PinCode should be in 6 digits & numeric", {
+          position: "bottom-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } 
+      else {
         toast.error("Error in Adding Order !", {
           position: "bottom-center",
           autoClose: 2000,
@@ -205,6 +237,7 @@ const Checkout = ({
                 value={name}
                 onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                placeholder="Enter Name"
               />
             </div>
           </div>
@@ -244,6 +277,7 @@ const Checkout = ({
               value={address}
               onChange={handleChange}
               className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              placeholder="Enter Address"
             />
           </div>
         </div>
@@ -264,6 +298,7 @@ const Checkout = ({
                 value={phone}
                 onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                placeholder="Enter Phone in 10 digits"
               />
             </div>
           </div>
@@ -283,6 +318,7 @@ const Checkout = ({
                 value={pincode}
                 onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                placeholder="Enter PinCode"
               />
             </div>
           </div>
@@ -310,7 +346,7 @@ const Checkout = ({
           <div className="px-2 w-1/2">
             <div className=" mb-4">
               <label htmlFor="city" className="leading-7 text-sm text-gray-600">
-                City
+                District
               </label>
               <input
                 type="text"
