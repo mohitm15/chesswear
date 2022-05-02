@@ -82,10 +82,11 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
         theme="colored"
         />
         <div className="container px-5 py-16 mx-auto">
-          <div className="lg:w-4/5 mx-auto flex flex-wrap">
+          <div className="lg:w-4/5 mx-auto flex flex-wrap overflow-hidden">
+            
             <img
-              alt="ecommerce"
-              className="lg:w-1/2 w-full h-80 lg:h-[36rem] object-cover object-top rounded"
+              alt="ecommerce "
+              className="lg:w-1/2 w-full h-80 lg:h-[36rem] object-cover object-top rounded transform transition duration-500 hover:scale-110 ease-in-out" 
               src={`${colorSizeSlug[color][size]["url"]}`}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">

@@ -39,12 +39,13 @@ const handler = async (req, res) => {
       return;
     }
 
-    if(req.body.phone.length != 10 || !Number.isInteger(req.body.phone)) {
+    if(req.body.phone.length != 10 || Number.isInteger(req.body.phone)) {
+      console.log("len = ",req.body.phone.length)
       res.status(500).json({ success: false, error: "err7" });
       return;
     }
 
-    if(req.body.pincode.length != 6 || !Number.isInteger(req.body.pincode)) {
+    if(req.body.pincode.length != 6 || Number.isInteger(req.body.pincode)) {
       res.status(500).json({ success: false, error: "err8" });
       return;
     }

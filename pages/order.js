@@ -57,7 +57,7 @@ const MyOrder = ({ order , clearCart}) => {
                 <span className="title-font font-medium text-2xl text-gray-900">
                   Subtotal :  <span className="ml-4 text-red-900 font-bold text-3xl leading-tight">₹ {order.subtotal} /-</span>
                 </span>
-                <button className="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
+                <button onClick={()=>router.push(`/track?id=${order._id}`)} className="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">
                   Track Order
                 </button>
               </div>

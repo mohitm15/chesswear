@@ -31,7 +31,7 @@ const Chessboards = ({ chessboards }) => {
                     <a className="block relative h-64 md:h-72 rounded overflow-hidden">
                       <img
                         alt="ecommerce"
-                        className="m-auto"
+                        className="m-auto transform transition duration-500 hover:scale-110 ease-in-out"
                         src={chessboards[item].img}
                       />
                     </a>
