@@ -20,7 +20,7 @@ const Track = ({order}) => {
           </h1>
           <p className="leading-relaxed text-base"><span className="text-blue-900 font-extralight">Order No. {order.orderId} </span> : {order.address}</p>
         </div>
-        <div className="flex flex-wrap w-full">
+        <div className="flex flex-wrap w-full justify-between">
           <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
@@ -157,11 +157,13 @@ const Track = ({order}) => {
               </div>
             </div>
           </div>
+          <div className="bg-black">
           <img
-            className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12 rounded-xl border-2 hover:opacity-70"
+            className="w-full object-cover h-full object-center block hover:opacity-50 transform transition-opacity duration-500"
             src="map.jpg"
             alt="step"
           />
+          </div>
         </div>
       </div>
     </section>
