@@ -21,7 +21,7 @@ const Signup = () => {
       body: JSON.stringify(data),
     });
     let response = res.json();
-    console.log(response);
+    //console.log(response);
     setName("");
     setEmail("");
     setPassword("");

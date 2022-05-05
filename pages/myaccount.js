@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 const MyAccount = ({ usertoken }) => {
   const router = useRouter();
-  console.log("us = ",usertoken)
+  //console.log("us = ",usertoken)
   useEffect(() => {
     if (!localStorage.getItem("token")) {
       router.push("/");
@@ -12,7 +12,7 @@ const MyAccount = ({ usertoken }) => {
 
 
   function parseJwt(token) {
-    console.log("us = ",token)
+    //console.log("us = ",token)
     var base64Url = token.split(".")[1];
     var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
     var jsonPayload = decodeURIComponent(

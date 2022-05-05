@@ -8,7 +8,7 @@ const handler = async (req, res) => {
       sumtotal = 0;
     for (let item in req.body.cart) {
       //got key(slug) as item
-      console.log(item);
+      //console.log(item);
       sumtotal += req.body.cart[item].qty * req.body.cart[item].price;
       product = await Product.findOne({ slug: item });
 
@@ -40,7 +40,7 @@ const handler = async (req, res) => {
     }
 
     if(req.body.phone.length != 10 || Number.isInteger(req.body.phone)) {
-      console.log("len = ",req.body.phone.length)
+      //console.log("len = ",req.body.phone.length)
       res.status(500).json({ success: false, error: "err7" });
       return;
     }
