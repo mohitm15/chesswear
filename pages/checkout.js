@@ -43,10 +43,26 @@ const Checkout = ({
   }
 
   const handleChange = async (e) => {
-    //console.log("user",usertoken)
-
-    let userdetails = parseJwt(usertoken.value);
-    setEmail(userdetails.email);
+    console.log("user from checkout= ", usertoken);
+    if(usertoken.value)
+    {
+      let userdetails = parseJwt(usertoken.value);
+      setEmail(userdetails.email);
+    }
+    else {
+      toast.error("Login before checking out the order.", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      setTimeout(() => {
+        router.push(`/login`);
+      }, 1000);
+    }
 
     //handlechange
     if (e.target.name === "name") {

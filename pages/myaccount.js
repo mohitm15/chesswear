@@ -3,16 +3,16 @@ import { useRouter } from "next/router";
 
 const MyAccount = ({ usertoken }) => {
   const router = useRouter();
-
+  console.log("us = ",usertoken)
   useEffect(() => {
     if (!localStorage.getItem("token")) {
       router.push("/");
     }
   }, []);
 
-  //console.log("user = ", usertoken);
 
   function parseJwt(token) {
+    console.log("us = ",token)
     var base64Url = token.split(".")[1];
     var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
     var jsonPayload = decodeURIComponent(
@@ -27,7 +27,19 @@ const MyAccount = ({ usertoken }) => {
     return JSON.parse(jsonPayload);
   }
 
-  let userdetails = parseJwt(usertoken.value);
+  let userdetails = {}
+  
+  try{
+    if(usertoken.value != null){
+    //console.log("us = ",usertoken)
+    userdetails = parseJwt(usertoken.value);
+  }
+  else{
+    router.push('/');
+  }}
+  catch(err){
+    console.log(err)
+  }
   //console.log("parsed = ", userdetails);
 
   return (

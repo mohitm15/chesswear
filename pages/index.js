@@ -1,14 +1,12 @@
 import Head from "next/head";
-import Slider from "react-slick";
+
+
+
 
 export default function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+//MONGO_URI=mongodb://localhost:27017/chesswear
+//MONGO_URI=mongodb+srv://mohit_maroliya:password@cluster0.ttieq.mongodb.net/chesswear?retryWrites=true&w=majority
+//MONGO_URI=mongodb+srv://mohit_maroliya:password@cluster0.ttieq.mongodb.net/chesswear
 
   return (
     <div>
