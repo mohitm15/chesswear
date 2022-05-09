@@ -1,0 +1,2164 @@
+[{
+    "_id": {
+      "$oid": "62555c1de95564fbf5d9e537"
+    },
+    "title": "King Chess Stylish Men’s t-Shirt",
+    "slug": "wear-the-chess-king-M-Green",
+    "address": "IIT Jodhpur, Jodhpur",
+    "desc": "Wear the exclusive regular Fit Men's Cotton T-Shirt with Chess King printed ",
+    "img": "https://m.media-amazon.com/images/I/51oSEIoZbYS._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "M",
+    "color": "Green",
+    "price": 599,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-12T11:01:49.605Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-29T15:08:17.151Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555c1de95564fbf5d9e53a"
+    },
+    "title": "King Chess Stylish Men’s t-Shirt",
+    "slug": "wear-the-chess-king-M-Black",
+    "address": "IIT Jodhpur, Jodhpur",
+    "desc": "Wear the exclusive regular Fit Men's Cotton T-Shirt with Chess King printed ",
+    "img": "https://m.media-amazon.com/images/I/61uBx8i8eVS._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "M",
+    "color": "Black",
+    "price": 599,
+    "availableQty": 47,
+    "createdAt": {
+      "$date": "2022-04-12T11:01:49.615Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-29T15:08:17.146Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555c1de95564fbf5d9e53c"
+    },
+    "title": "King Chess Stylish Men’s t-Shirt",
+    "slug": "wear-the-chess-king-M-Red",
+    "address": "IIT Jodhpur, Jodhpur",
+    "desc": "Wear the exclusive regular Fit Men's Cotton T-Shirt with Chess King printed ",
+    "img": "https://m.media-amazon.com/images/I/61-GZreX6+S._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "M",
+    "color": "Red",
+    "price": 599,
+    "availableQty": 39,
+    "createdAt": {
+      "$date": "2022-04-12T11:01:49.617Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-29T11:53:33.050Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555c1de95564fbf5d9e53e"
+    },
+    "title": "King Chess Stylish Men’s t-Shirt",
+    "slug": "wear-the-chess-king-M-Yellow",
+    "address": "IIT Jodhpur, Jodhpur",
+    "desc": "Wear the exclusive regular Fit Men's Cotton T-Shirt with Chess King printed ",
+    "img": "https://m.media-amazon.com/images/I/610skl3SdIS._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "M",
+    "color": "Yellow",
+    "price": 599,
+    "availableQty": 40,
+    "createdAt": {
+      "$date": "2022-04-12T11:01:49.619Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:01:49.619Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555ec1e95564fbf5d9e548"
+    },
+    "title": "Men's Think-Chess T-Shirt",
+    "slug": "wear-the-chess-think-XL-Red",
+    "address": "IIT Bombay, Mumbai",
+    "desc": "Wear the exclusive chess Think Chess tshirt",
+    "img": "https://m.media-amazon.com/images/I/415a+FMn4nL.jpg",
+    "category": "Tshirt",
+    "size": "XL",
+    "color": "Red",
+    "price": 499,
+    "availableQty": 60,
+    "createdAt": {
+      "$date": "2022-04-12T11:13:05.872Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-28T13:27:56.939Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555ec1e95564fbf5d9e54b"
+    },
+    "title": "Men's Think-Chess T-Shirt",
+    "slug": "wear-the-chess-think-XL-Blue",
+    "address": "IIT Bombay, Mumbai",
+    "desc": "Wear the exclusive chess Think Chess tshirt",
+    "img": "https://m.media-amazon.com/images/I/41QJ-DfctcL.jpg",
+    "category": "Tshirt",
+    "size": "XL",
+    "color": "Blue",
+    "price": 599,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-12T11:13:05.879Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:13:05.879Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555ec1e95564fbf5d9e54d"
+    },
+    "title": "Men's Think-Chess T-Shirt",
+    "slug": "wear-the-chess-think-XL-Yellow",
+    "address": "IIT Bombay, Mumbai",
+    "desc": "Wear the exclusive chess Think Chess tshirt",
+    "img": "https://m.media-amazon.com/images/I/41zxCEHKutL.._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "XL",
+    "color": "Yellow",
+    "price": 499,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-12T11:13:05.882Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:13:05.882Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555ec1e95564fbf5d9e54f"
+    },
+    "title": "Men's Think-Chess T-Shirt",
+    "slug": "wear-the-chess-think-XL-White",
+    "address": "IIT Bombay, Mumbai",
+    "desc": "Wear the exclusive chess Think Chess tshirt",
+    "img": "https://m.media-amazon.com/images/I/41uBlzn4GML.._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "XL",
+    "color": "White",
+    "price": 499,
+    "availableQty": 50,
+    "createdAt": {
+      "$date": "2022-04-12T11:13:05.884Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:13:05.884Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555feae95564fbf5d9e556"
+    },
+    "title": "Men's ChessMove Tshirt",
+    "slug": "wear-the-chess-move-XXL-Black",
+    "address": "IIT Indore, Indore",
+    "desc": "Wear the exclusive chessevery move matters tshirt",
+    "img": "https://m.media-amazon.com/images/I/71R38tnQ1BL._UL1500_.jpg",
+    "category": "Tshirt",
+    "size": "XXL",
+    "color": "Black",
+    "price": 399,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-12T11:18:02.500Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:18:02.500Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555feae95564fbf5d9e559"
+    },
+    "title": "Men's ChessMove Tshirt",
+    "slug": "wear-the-chess-move-XXL-Yellow",
+    "address": "IIT Indore, Indore",
+    "desc": "Wear the exclusive chessevery move matters tshirt",
+    "img": "https://m.media-amazon.com/images/I/610skl3SdIS._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "XXL",
+    "color": "Yellow",
+    "price": 299,
+    "availableQty": 9,
+    "createdAt": {
+      "$date": "2022-04-12T11:18:02.506Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:18:02.506Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555feae95564fbf5d9e55b"
+    },
+    "title": "Men's ChessMove Tshirt",
+    "slug": "wear-the-chess-move-XXL-Green",
+    "address": "IIT Indore, Indore",
+    "desc": "Wear the exclusive chessevery move matters tshirt",
+    "img": "https://m.media-amazon.com/images/I/61kzr3TTmJL._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "XXL",
+    "color": "Green",
+    "price": 399,
+    "availableQty": 17,
+    "createdAt": {
+      "$date": "2022-04-12T11:18:02.509Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:18:02.509Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62555feae95564fbf5d9e55d"
+    },
+    "title": "Men's ChessMove Tshirt",
+    "slug": "wear-the-chess-move-XXL-White",
+    "address": "IIT Indore, Indore",
+    "desc": "Wear the exclusive chessevery move matters tshirt",
+    "img": "https://m.media-amazon.com/images/I/61ojOTOYXRL._UX679_.jpg",
+    "category": "Tshirt",
+    "size": "XXL",
+    "color": "White",
+    "price": 399,
+    "availableQty": 60,
+    "createdAt": {
+      "$date": "2022-04-12T11:18:02.512Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:18:02.512Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625560d8e95564fbf5d9e563"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-S-Black",
+    "address": "IIT Indore, Indore",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/51PmO9YDiuL._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "S",
+    "color": "Black",
+    "price": 499,
+    "availableQty": 6,
+    "createdAt": {
+      "$date": "2022-04-12T11:22:00.901Z"
+    },
+    "updatedAt": {
+      "$date": "2022-05-01T07:52:35.139Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625560d8e95564fbf5d9e566"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-S-Blue",
+    "address": "IIT Indore, Indore",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/61Oo8YxDh4L._SX679._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "S",
+    "color": "Blue",
+    "price": 499,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-12T11:22:00.906Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:22:00.906Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625560d8e95564fbf5d9e568"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-S-Green",
+    "address": "IIT Indore, Indore",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/61UI8G3Y71L._SX679._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "S",
+    "color": "Green",
+    "price": 499,
+    "availableQty": 5,
+    "createdAt": {
+      "$date": "2022-04-12T11:22:00.909Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-29T12:18:59.758Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625560d8e95564fbf5d9e56a"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-S-Red",
+    "address": "IIT Indore, Indore",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/61A5O2P8TsL._SX679._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "S",
+    "color": "Red",
+    "price": 499,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-12T11:22:00.911Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-12T11:22:00.911Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c254f40a5f34dd4ca7f3a"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-M-Black",
+    "address": "IIT Patna, Bihar",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/51PmO9YDiuL._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "M",
+    "color": "Black",
+    "price": 399,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-17T14:33:51.760Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-17T14:33:51.760Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c254f40a5f34dd4ca7f3d"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-L-Black",
+    "address": "IIT Patna, Bihar",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/51PmO9YDiuL._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "L",
+    "color": "Black",
+    "price": 459,
+    "availableQty": 3,
+    "createdAt": {
+      "$date": "2022-04-17T14:33:51.772Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-17T14:33:51.772Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c254f40a5f34dd4ca7f3f"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-XL-Black",
+    "address": "IIT Patna, Bihar",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/51PmO9YDiuL._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "XL",
+    "color": "Black",
+    "price": 499,
+    "availableQty": 70,
+    "createdAt": {
+      "$date": "2022-04-17T14:33:51.775Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-17T14:33:51.775Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c254f40a5f34dd4ca7f41"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-XXL-Black",
+    "address": "IIT Patna, Bihar",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/51PmO9YDiuL._UL1200_.jpg",
+    "category": "Tshirt",
+    "size": "XXL",
+    "color": "Black",
+    "price": 499,
+    "availableQty": 40,
+    "createdAt": {
+      "$date": "2022-04-17T14:33:51.777Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-17T14:33:51.777Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c276e40a5f34dd4ca7f46"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-XL-Red",
+    "address": "IIT Bhilai, Chattisgarh",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/61A5O2P8TsL._SX679._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "XL",
+    "color": "Red",
+    "price": 499,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-17T14:42:54.943Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-17T14:42:54.943Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c276e40a5f34dd4ca7f49"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-XXL-Red",
+    "address": "IIT Bhilai, Chattisgarh",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/61A5O2P8TsL._SX679._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "XXL",
+    "color": "Red",
+    "price": 499,
+    "availableQty": 40,
+    "createdAt": {
+      "$date": "2022-04-17T14:42:54.964Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-17T14:42:54.964Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c2b1840a5f34dd4ca7f63"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-XL-Blue",
+    "address": "IIT Bhilai, Chattisgarh",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/61Oo8YxDh4L._SX679._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "XL",
+    "color": "Blue",
+    "price": 499,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-17T14:58:32.673Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-17T14:58:32.673Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c2b1840a5f34dd4ca7f66"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-L-Blue",
+    "address": "IIT Bhilai, Chattisgarh",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/61Oo8YxDh4L._SX679._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "L",
+    "color": "Blue",
+    "price": 499,
+    "availableQty": 31,
+    "createdAt": {
+      "$date": "2022-04-17T14:58:32.693Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-29T12:18:59.761Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c2baf40a5f34dd4ca7f6b"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-XXL-Green",
+    "address": "IIT Jammu, Jammu",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/61UI8G3Y71L._SX679._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "XXL",
+    "color": "Green",
+    "price": 499,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-17T15:01:03.101Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-17T15:01:03.101Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625c2baf40a5f34dd4ca7f6e"
+    },
+    "title": "Men's Chess-Formula T-Shirt",
+    "slug": "wear-the-chess-formula-M-Green",
+    "address": "IIT Jammu, Jammu",
+    "desc": "Wear the exclusive chess chemical  formula tshirt",
+    "img": "https://m.media-amazon.com/images/I/61UI8G3Y71L._SX679._SX._UX._SY._UY_.jpg",
+    "category": "Tshirt",
+    "size": "M",
+    "color": "Green",
+    "price": 499,
+    "availableQty": 40,
+    "createdAt": {
+      "$date": "2022-04-17T15:01:03.105Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-17T15:01:03.105Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625e9eb34cda1002f79e8d70"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-M-Yellow",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/71FcDZJM0qL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Yellow",
+    "price": 799,
+    "availableQty": 6,
+    "createdAt": {
+      "$date": "2022-04-19T11:36:19.247Z"
+    },
+    "updatedAt": {
+      "$date": "2022-05-02T10:31:44.618Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625e9f9c4cda1002f79e8d78"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-L-Yellow",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/71FcDZJM0qL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "L",
+    "color": "Yellow",
+    "price": 799,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-19T11:40:12.941Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:40:12.941Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625e9f9c4cda1002f79e8d7b"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-XL-Yellow",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/71FcDZJM0qL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Yellow",
+    "price": 799,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-19T11:40:12.950Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:40:12.950Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea0044cda1002f79e8d80"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-L-Red",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81lx2pNgUCL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "L",
+    "color": "Red",
+    "price": 799,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-19T11:41:56.823Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:41:56.823Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea0044cda1002f79e8d83"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-XL-Red",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81lx2pNgUCL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Red",
+    "price": 799,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-19T11:41:56.831Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:41:56.831Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea1584cda1002f79e8d9a"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-L-Pink",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81HJNQxwNgL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "L",
+    "color": "Pink",
+    "price": 799,
+    "availableQty": 1,
+    "createdAt": {
+      "$date": "2022-04-19T11:47:36.956Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-28T13:27:56.956Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea1584cda1002f79e8d9d"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-XL-Pink",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81HJNQxwNgL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Pink",
+    "price": 799,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-19T11:47:36.964Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:47:36.964Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea1584cda1002f79e8d9f"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-XXL-Pink",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81HJNQxwNgL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Pink",
+    "price": 799,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-19T11:47:36.967Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:47:36.967Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea1584cda1002f79e8da1"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-M-Pink",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81HJNQxwNgL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Pink",
+    "price": 798,
+    "availableQty": 17,
+    "createdAt": {
+      "$date": "2022-04-19T11:47:36.969Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:47:36.969Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea3c9bd7f354ef03b3f3c"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-L-Blue",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/8144M-PiE5L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "L",
+    "color": "Blue",
+    "price": 799,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-19T11:58:01.686Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:58:01.686Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea3c9bd7f354ef03b3f3f"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-XL-Blue",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/8144M-PiE5L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Blue",
+    "price": 799,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-19T11:58:01.696Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:58:01.696Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea3c9bd7f354ef03b3f41"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-XXL-Blue",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/8144M-PiE5L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Blue",
+    "price": 799,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-19T11:58:01.699Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:58:01.699Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ea3c9bd7f354ef03b3f43"
+    },
+    "title": "Men's Chess-BTS Hoodies",
+    "slug": "wear-the-chesshoodie-bts-M-Blue",
+    "address": "IIT Ropar, Punjab",
+    "desc": "Wear the Exclusive Chess-BTS Premium Winter Cotton Hoodies",
+    "img": "https://m.media-amazon.com/images/I/8144M-PiE5L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Blue",
+    "price": 799,
+    "availableQty": 17,
+    "createdAt": {
+      "$date": "2022-04-19T11:58:01.705Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-19T11:58:01.705Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff404bd7f354ef03b3fba"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-L-Maroon",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61njzfQGtCL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "L",
+    "color": "Maroon",
+    "price": 899,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-20T11:52:36.674Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T11:52:36.674Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff404bd7f354ef03b3fbc"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-XL-Maroon",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61njzfQGtCL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Maroon",
+    "price": 899,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-20T11:52:36.724Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T11:52:36.724Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff404bd7f354ef03b3fbe"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-L-White",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61R2HcPeq4L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "L",
+    "color": "White",
+    "price": 899,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T11:52:36.744Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T11:52:36.744Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff404bd7f354ef03b3fc0"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-XL-White",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61R2HcPeq4L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "White",
+    "price": 899,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T11:52:36.751Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T11:52:36.751Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff4e5bd7f354ef03b3fcc"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-L-Blue",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/611ZbXm+n-L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "L",
+    "color": "Blue",
+    "price": 899,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-20T11:56:21.599Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T11:56:21.599Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff4e5bd7f354ef03b3fcf"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-XL-Blue",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/611ZbXm+n-L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Blue",
+    "price": 899,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-20T11:56:21.602Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T11:56:21.602Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff4e5bd7f354ef03b3fd1"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-L-Yellow",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61TwxtQqEJL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "L",
+    "color": "Yellow",
+    "price": 899,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T11:56:21.606Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T11:56:21.606Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff4e5bd7f354ef03b3fd3"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-XL-Yellow",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61TwxtQqEJL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Yellow",
+    "price": 899,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T11:56:21.608Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T11:56:21.608Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff7e2bd7f354ef03b3fd8"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-XXL-Blue",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/611ZbXm+n-L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Blue",
+    "price": 899,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-20T12:09:06.612Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:09:06.612Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff7e2bd7f354ef03b3fda"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-S-Blue",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/611ZbXm+n-L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Blue",
+    "price": 899,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-20T12:09:06.613Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:09:06.613Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff7e2bd7f354ef03b3fdc"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-S-Yellow",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61TwxtQqEJL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Yellow",
+    "price": 899,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:09:06.615Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:09:06.615Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff7e2bd7f354ef03b3fde"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-XXL-Yellow",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61TwxtQqEJL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Yellow",
+    "price": 899,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:09:06.616Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:09:06.616Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff847bd7f354ef03b3fe0"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-XXL-Black",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61GnOLXfS+L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Black",
+    "price": 899,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-20T12:10:47.863Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:10:47.863Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff847bd7f354ef03b3fe2"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-S-Black",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61GnOLXfS+L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Black",
+    "price": 899,
+    "availableQty": 12,
+    "createdAt": {
+      "$date": "2022-04-20T12:10:47.865Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:10:47.865Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff847bd7f354ef03b3fe4"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-M-Black",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61GnOLXfS+L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Black",
+    "price": 899,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:10:47.866Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:10:47.866Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ff847bd7f354ef03b3fe6"
+    },
+    "title": "Women's Chess-Favorite Hoodies",
+    "slug": "wear-the-chesshoodie-fav-XL-Black",
+    "address": "IIT Goa, Goa",
+    "desc": "Wear the Stylish Chess-Favorite Premium Winter Cotton Hoodies SweatShirt",
+    "img": "https://m.media-amazon.com/images/I/61GnOLXfS+L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Black",
+    "price": 899,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:10:47.869Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:10:47.869Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffaecbd7f354ef03b3ff1"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XXL-Black",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71uUz7m6vFL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Black",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:22:04.474Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:22:04.474Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffaecbd7f354ef03b3ff3"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-S-Black",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71uUz7m6vFL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Black",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:22:04.476Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:22:04.476Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffaecbd7f354ef03b3ff5"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-M-Black",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71uUz7m6vFL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Black",
+    "price": 1099,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:22:04.478Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:22:04.478Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffaecbd7f354ef03b3ff7"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XL-Black",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71uUz7m6vFL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Black",
+    "price": 1099,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:22:04.479Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:22:04.479Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffb32bd7f354ef03b3ffc"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XXL-Maroon",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/61Ryx6XFc-L._UL1280_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Maroon",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:23:14.671Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:23:14.671Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffb32bd7f354ef03b3ffe"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-S-Maroon",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/61Ryx6XFc-L._UL1280_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Maroon",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:23:14.678Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:23:14.678Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffb32bd7f354ef03b4000"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-M-Maroon",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/61Ryx6XFc-L._UL1280_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Maroon",
+    "price": 1099,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:23:14.686Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:23:14.686Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffb32bd7f354ef03b4002"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XL-Maroon",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/61Ryx6XFc-L._UL1280_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Maroon",
+    "price": 1099,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:23:14.692Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:23:14.692Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffb97bd7f354ef03b4007"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XXL-Yellow",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71omTiYUkjL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Yellow",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:24:55.417Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:24:55.417Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffb97bd7f354ef03b4009"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-S-Yellow",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71omTiYUkjL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Yellow",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:24:55.419Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:24:55.419Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffb97bd7f354ef03b400b"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-M-Yellow",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71omTiYUkjL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Yellow",
+    "price": 1099,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:24:55.421Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:24:55.421Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffb97bd7f354ef03b400d"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XL-Yellow",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71omTiYUkjL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Yellow",
+    "price": 1099,
+    "availableQty": 11,
+    "createdAt": {
+      "$date": "2022-04-20T12:24:55.423Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:24:55.423Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffc54bd7f354ef03b4012"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XXL-Red",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71TX2ARFUJL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Red",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:28:04.767Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:28:04.767Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffc54bd7f354ef03b4014"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-S-Red",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71TX2ARFUJL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Red",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:28:04.773Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:28:04.773Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffc54bd7f354ef03b4016"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-M-Red",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71TX2ARFUJL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Red",
+    "price": 1099,
+    "availableQty": 21,
+    "createdAt": {
+      "$date": "2022-04-20T12:28:04.776Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:28:04.776Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffc54bd7f354ef03b4018"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XL-Red",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/71TX2ARFUJL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Red",
+    "price": 1099,
+    "availableQty": 21,
+    "createdAt": {
+      "$date": "2022-04-20T12:28:04.780Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:28:04.780Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffd65bd7f354ef03b401e"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XXL-Gray",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/61PZn1iwx6L._UL1280_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Gray",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:32:37.600Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:32:37.600Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffd65bd7f354ef03b4021"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-S-Gray",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/61PZn1iwx6L._UL1280_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Gray",
+    "price": 1099,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:32:37.697Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:32:37.697Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffd65bd7f354ef03b4023"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-M-Gray",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/61PZn1iwx6L._UL1280_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Gray",
+    "price": 1099,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:32:37.701Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:32:37.701Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "625ffd65bd7f354ef03b4025"
+    },
+    "title": "Chess-Avengers Unisex Printed Hoodie",
+    "slug": "wear-the-chesshoodie-avengers-XL-Gray",
+    "address": "IIT Kanpur, UP",
+    "desc": "Wear the Stylish Chess-Avenger Printed Premium Winter Cotton-Soft Hoodie ",
+    "img": "https://m.media-amazon.com/images/I/61PZn1iwx6L._UL1280_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Gray",
+    "price": 1099,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:32:37.705Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:32:37.705Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600002bd7f354ef03b402f"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XXL-Maroon",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/813gV9tGXeL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Maroon",
+    "price": 1299,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:43:46.463Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:43:46.463Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600002bd7f354ef03b4032"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-S-Maroon",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/813gV9tGXeL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Maroon",
+    "price": 1299,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:43:46.473Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:43:46.473Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600002bd7f354ef03b4034"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-M-Maroon",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/813gV9tGXeL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Maroon",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:43:46.508Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:43:46.508Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600002bd7f354ef03b4036"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XL-Maroon",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/813gV9tGXeL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Maroon",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:43:46.511Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:43:46.511Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600042bd7f354ef03b403a"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XXL-Pink",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/71McBIh4McL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Pink",
+    "price": 1299,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:44:50.377Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:44:50.377Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600042bd7f354ef03b403d"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-S-Pink",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/71McBIh4McL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Pink",
+    "price": 1299,
+    "availableQty": 10,
+    "createdAt": {
+      "$date": "2022-04-20T12:44:50.379Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:44:50.379Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600042bd7f354ef03b403f"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-M-Pink",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/71McBIh4McL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Pink",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:44:50.381Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:44:50.381Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600042bd7f354ef03b4041"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XL-Pink",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/71McBIh4McL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Pink",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:44:50.382Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:44:50.382Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "626000aabd7f354ef03b4047"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XXL-Black",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81mKbpdBFDL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Black",
+    "price": 1299,
+    "availableQty": 5,
+    "createdAt": {
+      "$date": "2022-04-20T12:46:34.317Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:46:34.317Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "626000aabd7f354ef03b404a"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-S-Black",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81mKbpdBFDL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Black",
+    "price": 1299,
+    "availableQty": 16,
+    "createdAt": {
+      "$date": "2022-04-20T12:46:34.320Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:46:34.320Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "626000aabd7f354ef03b404c"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-M-Black",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81mKbpdBFDL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Black",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:46:34.321Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:46:34.321Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "626000aabd7f354ef03b404e"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XL-Black",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81mKbpdBFDL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Black",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:46:34.323Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:46:34.323Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "626000e1bd7f354ef03b4050"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XXL-Red",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81iRStYGkUL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Red",
+    "price": 1299,
+    "availableQty": 5,
+    "createdAt": {
+      "$date": "2022-04-20T12:47:29.595Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:47:29.595Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "626000e1bd7f354ef03b4052"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-S-Red",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81iRStYGkUL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Red",
+    "price": 1299,
+    "availableQty": 16,
+    "createdAt": {
+      "$date": "2022-04-20T12:47:29.599Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:47:29.599Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "626000e1bd7f354ef03b4054"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-M-Red",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81iRStYGkUL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Red",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:47:29.601Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:47:29.601Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "626000e1bd7f354ef03b4056"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XL-Red",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81iRStYGkUL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Red",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:47:29.604Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:47:29.604Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "6260015cbd7f354ef03b405a"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XXL-Blue",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/811QoMFa72L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Blue",
+    "price": 1299,
+    "availableQty": 5,
+    "createdAt": {
+      "$date": "2022-04-20T12:49:32.622Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:49:32.622Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "6260015cbd7f354ef03b405c"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-S-Blue",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/811QoMFa72L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Blue",
+    "price": 1299,
+    "availableQty": 16,
+    "createdAt": {
+      "$date": "2022-04-20T12:49:32.624Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:49:32.624Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "6260015cbd7f354ef03b405e"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-M-Blue",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/811QoMFa72L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Blue",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:49:32.627Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:49:32.627Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "6260015cbd7f354ef03b4060"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XL-Blue",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/811QoMFa72L._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Blue",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:49:32.629Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:49:32.629Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600187bd7f354ef03b4062"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XXL-Gray",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81i9lQvBxaL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XXL",
+    "color": "Gray",
+    "price": 1299,
+    "availableQty": 5,
+    "createdAt": {
+      "$date": "2022-04-20T12:50:15.457Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:50:15.457Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600187bd7f354ef03b4064"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-S-Gray",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81i9lQvBxaL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "S",
+    "color": "Gray",
+    "price": 1299,
+    "availableQty": 16,
+    "createdAt": {
+      "$date": "2022-04-20T12:50:15.459Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:50:15.459Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600187bd7f354ef03b4066"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-M-Gray",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81i9lQvBxaL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "M",
+    "color": "Gray",
+    "price": 1299,
+    "availableQty": 7,
+    "createdAt": {
+      "$date": "2022-04-20T12:50:15.460Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:50:15.460Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62600187bd7f354ef03b4068"
+    },
+    "title": "Women's Chess-Zipped Plain Hoodie",
+    "slug": "wear-the-chesshoodie-zipped-XL-Gray",
+    "address": "IIT Mandi, HP",
+    "desc": "Wear the Exclusive Women's Cotton Hooded Zipped Hoodies",
+    "img": "https://m.media-amazon.com/images/I/81i9lQvBxaL._UL1500_.jpg",
+    "category": "Hoodie",
+    "size": "XL",
+    "color": "Gray",
+    "price": 1299,
+    "availableQty": 70,
+    "createdAt": {
+      "$date": "2022-04-20T12:50:15.463Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-20T12:50:15.463Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62601db7bd7f354ef03b407b"
+    },
+    "title": "Best Wooden Handcrafted Chess Board Set",
+    "slug": "wear-the-chessboard-1",
+    "address": "IIT Mandi, HP",
+    "desc": "Wooden Handcrafted Foldable Magnetic Chess Board Set with Magnetic Pieces and Extra Queens for Kids and Adults (12x12 Inches, Brown)",
+    "img": "https://m.media-amazon.com/images/I/71y8xnEp0nL._SL1453_.jpg",
+    "category": "Chessboard",
+    "size": "12x12",
+    "color": "Brown",
+    "price": 1399,
+    "availableQty": 46,
+    "createdAt": {
+      "$date": "2022-04-20T14:50:31.702Z"
+    },
+    "updatedAt": {
+      "$date": "2022-05-01T06:08:36.071Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62601db7bd7f354ef03b407d"
+    },
+    "title": "Folding Handmade Wooden Chess Board Set",
+    "slug": "wear-the-chessboard-2",
+    "address": "IIT Mandi, HP",
+    "desc": "Handicrafts Palm Royal Handicrafts Best Folding Handmade Wooden Chess Board Set With Magnetic Pieces With Extra Queen | 10X10 Inches |(Multicolored)",
+    "img": "https://m.media-amazon.com/images/I/81uVxTfDspL._SL1500_.jpg",
+    "category": "Chessboard",
+    "size": "10x10",
+    "color": "Brown",
+    "price": 1099,
+    "availableQty": 49,
+    "createdAt": {
+      "$date": "2022-04-20T14:50:31.707Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-29T15:30:53.684Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62601db7bd7f354ef03b407f"
+    },
+    "title": "Magnetic Educational Chess Board Set",
+    "slug": "wear-the-chessboard-3",
+    "address": "IIT Mandi, HP",
+    "desc": "Elite Toys Magnetic Educational Chess Board Set with Folding Chess Board Travel Toys for Kids and Adults (10 Inch) ( Black Color )",
+    "img": "https://m.media-amazon.com/images/I/41us+lWbweL.jpg",
+    "category": "Chessboard",
+    "size": "10x10",
+    "color": "Black",
+    "price": 199,
+    "availableQty": 49,
+    "createdAt": {
+      "$date": "2022-04-20T14:50:31.709Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-29T15:30:53.692Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62601db7bd7f354ef03b4081"
+    },
+    "title": "Green Roll-Up Vinyl Premium Chess Board",
+    "slug": "wear-the-chessboard-4",
+    "address": "IIT Mandi, HP",
+    "desc": "Tima Best Value Tournament Chess Set 17x17 inches Staunton Chess Pieces and Green Roll-Up Vinyl Chess Board, Plastic Hollow But Solid Enough Pieces & Bag",
+    "img": "https://m.media-amazon.com/images/I/51Hsl9VzgbL.jpg",
+    "category": "Chessboard",
+    "size": "17x17",
+    "color": "Green",
+    "price": 499,
+    "availableQty": 49,
+    "createdAt": {
+      "$date": "2022-04-20T14:50:31.710Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-29T15:17:54.303Z"
+    },
+    "__v": 0
+  }]

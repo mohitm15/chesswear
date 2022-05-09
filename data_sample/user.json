@@ -1,0 +1,43 @@
+[{
+    "_id": {
+      "$oid": "62628b349439c80bbad7f0e6"
+    },
+    "name": "mohit4",
+    "email": "mohit4@test.com",
+    "password": "U2FsdGVkX18wDGYshdWb5kLeIU5Gl81BUT3KYhy7ikI=",
+    "createdAt": {
+      "$date": "2022-04-22T11:02:12.945Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-22T11:02:12.945Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "6264051c18a5b932a0883442"
+    },
+    "name": "Mohit5",
+    "email": "mohit5@test.com",
+    "password": "U2FsdGVkX1+ETRK9iKaVaEZmtYBzEZMneekhpQLaUGE=",
+    "createdAt": {
+      "$date": "2022-04-23T13:54:36.781Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-23T13:54:36.781Z"
+    },
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "6264077818a5b932a0883465"
+    },
+    "name": "Mohit6",
+    "email": "mohit6@test.com",
+    "password": "U2FsdGVkX194P4wUeZx8zefo3GjldtrgcqHrxzFQrPg=",
+    "createdAt": {
+      "$date": "2022-04-23T14:04:40.637Z"
+    },
+    "updatedAt": {
+      "$date": "2022-04-23T14:04:40.637Z"
+    },
+    "__v": 0
+  }]

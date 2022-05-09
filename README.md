@@ -60,10 +60,9 @@
                           ![img](https://user-images.githubusercontent.com/35539313/167111062-d63619aa-0d33-4ee9-b8da-fdfadae0ddbd.png)
 
 
-Chesswear as its name suggests is an e-commerce plateform where you can find variety of Chess-Inspired items. Not only the conventional ChessBoards, but you can also try different Chess-based Tshirts and Hoddies. Other accesories also includes Mugs. Get these products on hand with just few clicks. We''ll take care from your order placement to delivery status.
+Chesswear, as its name suggests is an e-commerce platform where you can find a variety of Chess-Inspired items. Not only the conventional ChessBoards, but you can also try different Chess-based Tshirts and Hoddies. Other accessories also include Mugs. Get these products on hand with just a few clicks. We will take care of your order placement to delivery status.
 
-On technical perspective, this is a web-app majorly based on NextJS and data is hosted over Mongo atlas. 
-
+From a technical perspective, this is a web app majorly based on NextJS and data is hosted over Mongo atlas. 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
