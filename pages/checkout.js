@@ -43,7 +43,7 @@ const Checkout = ({
   }
 
   const handleChange = async (e) => {
-    console.log("user from checkout= ", usertoken);
+    //console.log("user from checkout= ", usertoken);
     if(usertoken.value)
     {
       let userdetails = parseJwt(usertoken.value);
