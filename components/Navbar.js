@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -28,35 +28,51 @@ const Navbar = ({
   const router = useRouter();
   const ref = useRef();
   const [dropdown, setDropdown] = useState(false);
+  const [showSidecart, setShowsidecart] = useState(false);
+
+  useEffect(() => {
+    
+      Object.keys(cart).length !==0 && setShowsidecart(true);
+      if(router.pathname === '/checkout' || router.pathname === '/orders' || router.pathname === '/order' || router.pathname === '/myaccount') {
+        //console.log("pathname = ", router.pathname)
+        setShowsidecart(false);
+      } 
+    
+  }, [])
+
+
+  
 
   const toggleCart = () => {
-    if(localStorage.getItem('token')) {
-    if (ref.current.classList.contains("hidden")) {
-      //ref.current.classList.remove("translate-x-full");
-      ref.current.classList.remove("hidden");
-      //ref.current.classList.add("translate-x-0");
-      ref.current.classList.add("block");
-    } else if (!ref.current.classList.contains("hidden")) {
-      //ref.current.classList.remove("translate-x-0");
-      ref.current.classList.remove("block");
-      //ref.current.classList.add("translate-x-full");
-      ref.current.classList.add("hidden");
-    }
-  }
-  else {
-    toast.error("Kindly Login before creating the cart", {
-      position: "top-right",
-      autoClose: 1500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-    });
-    setTimeout(() => {
-      router.push("/login");
-    }, 2500);
-  }
+    setShowsidecart(!showSidecart);
+    
+  //   if(localStorage.getItem('token')) {
+  //   if (ref.current.classList.contains("hidden")) {
+  //     //ref.current.classList.remove("translate-x-full");
+  //     ref.current.classList.remove("hidden");
+  //     //ref.current.classList.add("translate-x-0");
+  //     ref.current.classList.add("block");
+  //   } else if (!ref.current.classList.contains("hidden")) {
+  //     //ref.current.classList.remove("translate-x-0");
+  //     ref.current.classList.remove("block");
+  //     //ref.current.classList.add("translate-x-full");
+  //     ref.current.classList.add("hidden");
+  //   }
+  // }
+  // else {
+  //   toast.error("Kindly Login before creating the cart", {
+  //     position: "top-right",
+  //     autoClose: 1500,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: false,
+  //     draggable: true,
+  //     progress: undefined,
+  //   });
+  //   setTimeout(() => {
+  //     router.push("/login");
+  //   }, 2500);
+  // }
   };
 
 
@@ -136,8 +152,8 @@ const Navbar = ({
       {/* side bar */}
       <div
         ref={ref}
-        className={`z-10 sideCart w-10/12 md:w-96 h-[100vh] absolute top-0 right-0 py-10 px-8 bg-blue-200 overflow-y-scroll transform transition-transform ${
-          Object.keys(cart).length !== 0 ? `block` : "hidden"
+        className={`z-10 sideCart w-10/12 md:w-96 h-[100vh] absolute top-0 right-0 py-10 px-8 bg-blue-200 overflow-y-scroll transition-all ${
+          showSidecart ? `block` : "hidden"
         } `}
       >
         <h2 className="text-2xl font-bold text-center">Shopping Cart </h2>
