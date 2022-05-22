@@ -1,6 +1,7 @@
 import connectDB from "../../middleware/mongoose";
 import Order from "../../models/Order";
 import Product from "../../models/Product";
+import serviceable_pincodes from "../../data_sample/pincodes.json";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
@@ -39,17 +40,24 @@ const handler = async (req, res) => {
       return;
     }
 
+    //TODO4: check if phone number is of coorect length
     if(req.body.phone.length != 10 || Number.isInteger(req.body.phone)) {
       //console.log("len = ",req.body.phone.length)
       res.status(500).json({ success: false, error: "err7" });
       return;
     }
-
+    //TODO5: check if pincode is of coorect length
     if(req.body.pincode.length != 6 || Number.isInteger(req.body.pincode)) {
       res.status(500).json({ success: false, error: "err8" });
       return;
     }
 
+    //TODO6: check if pincode is serviceable
+    if(!Object.values(serviceable_pincodes).includes(req.body.pincode)) {     
+      res.status(500).json({success:false, error: "err9"})
+    }
+
+    
     let orderToAdd = new Order({
       email: req.body.email,
       orderId: req.body.oid,

@@ -205,6 +205,17 @@ const Checkout = ({
           progress: undefined,
         });
       } 
+      else if (response.error === "err9") {
+        toast.error("Pincode is not serviceable currently", {
+          position: "bottom-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } 
       else {
         toast.error("Error in Adding Order !", {
           position: "bottom-center",
