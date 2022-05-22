@@ -67,9 +67,20 @@ const Footer = () => {
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                POLICIES
+                CUSTOMER SERVICE
               </h2>
               <nav className="list-none mb-10">
+              <li>
+                <Link href={"/contact"}>
+                  <a className="text-gray-600 hover:text-gray-800">Contact Us</a>
+                  </Link>
+                </li>
+                
+                <li>
+                  <Link href={"/about"}>
+                  <a className="text-gray-600 hover:text-gray-800">About Us</a>
+                  </Link>
+                </li>
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">
                     Return Policy
@@ -80,12 +91,7 @@ const Footer = () => {
                     Terms of Use
                   </a>
                 </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">Security</a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">Privacy</a>
-                </li>
+                
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">

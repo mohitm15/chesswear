@@ -105,9 +105,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-wrap -m-4">
+          <div className="flex flex-wrap -m-4 mb-4">
             <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
+              <div className="border border-gray-200 p-6 text-center rounded-lg hover:bg-slate-100 hover:border-indigo-800 hover:cursor-pointer ">
                 <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4">
                   <svg
                     fill="none"
@@ -122,16 +122,15 @@ export default function Home() {
                   </svg>
                 </div>
                 <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Shooting Stars
+                  Premium Tshirts
                 </h2>
                 <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
+                  Our T-Shirts are 100% made of premium cotton fabric and are easy to wash.
                 </p>
               </div>
             </div>
             <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
+              <div className="border border-gray-200 p-6 text-center rounded-lg hover:bg-slate-100 hover:border-indigo-800 hover:cursor-pointer">
                 <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4">
                   <svg
                     fill="none"
@@ -148,16 +147,15 @@ export default function Home() {
                   </svg>
                 </div>
                 <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  The Catalyzer
+                  Free Shipping
                 </h2>
                 <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
+                  Either delivering the order or picking up the returns all over India, we charge zero cost.
                 </p>
               </div>
             </div>
             <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
+              <div className="border border-gray-200 p-6 text-center rounded-lg hover:bg-slate-100 hover:border-indigo-800 hover:cursor-pointer">
                 <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4">
                   <svg
                     fill="none"
@@ -173,86 +171,14 @@ export default function Home() {
                   </svg>
                 </div>
                 <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Neptune
+                  Amazing Offers
                 </h2>
                 <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
+                  We provide instant cashbacks,amazing gift vouchers and discount on our products.
                 </p>
               </div>
             </div>
-            <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
-                  </svg>
-                </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Melanchole
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                  </svg>
-                </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Bunker
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Ramona Falls
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
-                </p>
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>

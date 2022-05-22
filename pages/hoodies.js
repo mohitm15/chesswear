@@ -36,7 +36,7 @@ const Hoodies = ({ hoodies }) => {
                       />
                     </a>
                     <div className="mt-4 text-center">
-                      <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
+                      <h3 className="text-blue-500 text-xs font-semibold tracking-widest title-font mb-1">
                         {hoodies[item].category}
                       </h3>
                       <h2 className="text-gray-900 title-font text-lg font-medium">

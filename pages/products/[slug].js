@@ -3,11 +3,10 @@ import { useRouter } from "next/router";
 import mongoose from "mongoose";
 import Product from "../../models/Product";
 
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 
-
-const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
+const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug, product }) => {
   //console.log(all_Tshirts);
 
   //console.log("keys = ",Object.keys(colorSizeSlug["Red"]))
@@ -29,7 +28,7 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
     if (Object.keys(pinjson).includes(pin)) {
       setIsAvailable(true);
       //console.log("Available");
-      toast.success('Your Pincode is serviceable', {
+      toast.success("Your Pincode is serviceable", {
         position: "bottom-center",
         autoClose: 1500,
         hideProgressBar: false,
@@ -37,11 +36,11 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        });
+      });
     } else {
       setIsAvailable(false);
       //console.log("NOt");
-      toast.error('Sorry! Pincode is not serviceable', {
+      toast.error("Sorry! Pincode is not serviceable", {
         position: "bottom-center",
         autoClose: 1500,
         hideProgressBar: false,
@@ -49,7 +48,7 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        });
+      });
     }
   };
 
@@ -60,33 +59,30 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
   const refreshVariant = (newsize, newcolor) => {
     let url = `http://localhost:3000/products/${colorSizeSlug[newcolor][newsize]["slug"]}`;
     //console.log("url = ",url, "newcolor - ",newcolor, "newsize - ", newsize)
-    //console.log("newvaraint -", colorSizeSlug)
-    router.push(url,undefined,{shallow:true});
+    //console.log("newvaraint -", colorSizeSlug);
+    router.push(url, undefined, { shallow: true });
   };
-
-
 
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden">
-      <ToastContainer
-        position="bottom-center"
-        autoClose={1500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        theme="colored"
+        <ToastContainer
+          position="bottom-center"
+          autoClose={1500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          theme="colored"
         />
-        <div className="container px-5 py-16 mx-auto">
+        <div className={`container px-5 py-16 mx-auto ${colorSizeSlug[color][size]["availableQty"] <= 0 ? 'opacity-60 ': 'opacity-100'} `}>
           <div className="lg:w-4/5 mx-auto flex flex-wrap overflow-hidden">
-            
             <img
               alt="ecommerce "
-              className="lg:w-1/2 w-full h-80 lg:h-[36rem] object-cover object-top rounded transform transition duration-500 hover:scale-110 ease-in-out" 
+              className="lg:w-1/2 w-full h-80 lg:h-[36rem] object-cover object-top rounded transform transition duration-500 hover:scale-110 ease-in-out"
               src={`${colorSizeSlug[color][size]["url"]}`}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
@@ -97,8 +93,6 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
                 {all_Tshirts[0].title} [{color} - {size}]
               </h1>
               <div className="flex mb-4">
-
-
                 {/* <span className="flex items-center">
                   <svg
                     fill="currentColor"
@@ -195,12 +189,8 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
                     </svg>
                   </a>
                 </span> */}
-
-
               </div>
-              <p className="leading-relaxed">
-                {all_Tshirts[0].desc}
-              </p>
+              <p className="leading-relaxed">{all_Tshirts[0].desc}</p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
                   <span className="mr-3">Color</span>
@@ -314,13 +304,11 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
                           setColor("Pink");
                         }}
                         className={`border-2 bg-pink-500 rounded-full w-6 h-6 focus:outline-none ${
-                          color === "Pink"
-                            ? "border-black"
-                            : "border-gray-300"
+                          color === "Pink" ? "border-black" : "border-gray-300"
                         }`}
                       ></button>
                     )}
-                    {Object.keys(colorSizeSlug).includes("Gray") &&
+                  {Object.keys(colorSizeSlug).includes("Gray") &&
                     Object.keys(colorSizeSlug["Gray"]).includes(size) && (
                       <button
                         onClick={() => {
@@ -332,7 +320,7 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
                         }`}
                       ></button>
                     )}
-                    {Object.keys(colorSizeSlug).includes("Brown") &&
+                  {Object.keys(colorSizeSlug).includes("Brown") &&
                     Object.keys(colorSizeSlug["Brown"]).includes(size) && (
                       <button
                         onClick={() => {
@@ -345,10 +333,10 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
                       ></button>
                     )}
                 </div>
-                
+
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
-                  
+
                   <div className="relative">
                     <select
                       value={size}
@@ -401,19 +389,46 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
                 </div>
               </div>
               <div className="flex">
-                <span className="title-font font-medium text-2xl text-gray-900">
-                  ₹{colorSizeSlug[color][size]["price"]}
-                </span>
-                <button
-                  onClick={() => addToCart(slug, 1, colorSizeSlug[color][size]["price"], all_Tshirts[0].title, size, color) }
-                  className="flex ml-auto md:ml-24 text-sm lg:text-base text-white bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded"
-                >
-                  Add to Cart
-                </button>
-                <button onClick={()=>{buyNow(slug, 1, colorSizeSlug[color][size]["price"], all_Tshirts[0].title, size, color)}} className="flex ml-1 md:ml-2 text-white text-sm lg:text-base bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded">
-                  Buy Now
-                </button>
-                {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 md:ml-6">
+                {colorSizeSlug[color][size]["availableQty"] <= 0 ? (
+                  <>
+                    <span className="leading-relaxed mb-4 text-red-700 rounded-3xl bg-red-100 hover:bg-red-100/70 p-3 border-[1px] border-red-700 inline-flex items-center justify-center ">This item is currently out of Stock. Please stay tuned :)</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="title-font font-medium text-2xl text-gray-900">
+                      ₹{colorSizeSlug[color][size]["price"]}
+                    </span>
+                    <button
+                      onClick={() =>
+                        addToCart(
+                          slug,
+                          1,
+                          colorSizeSlug[color][size]["price"],
+                          all_Tshirts[0].title,
+                          size,
+                          color
+                        )
+                      }
+                      className="flex ml-auto md:ml-24 text-sm lg:text-base text-white bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded"
+                    >
+                      Add to Cart
+                    </button>
+                    <button
+                      onClick={() => {
+                        buyNow(
+                          slug,
+                          1,
+                          colorSizeSlug[color][size]["price"],
+                          all_Tshirts[0].title,
+                          size,
+                          color
+                        );
+                      }}
+                      className="flex ml-1 md:ml-2 text-white text-sm lg:text-base bg-blue-500 border-0 py-2 px-4 lg:px-6 focus:outline-none hover:bg-blue-600 rounded"
+                    >
+                      Buy Now
+                    </button>
+                    {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 md:ml-6">
                   <svg
                     fill="currentColor"
                     strokeLinecap="round"
@@ -425,6 +440,8 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug,product }) => {
                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                   </svg>
                 </button> */}
+                  </>
+                )}
               </div>
               <div className="pin mt-6 space-x-2 flex text-sm">
                 <input
@@ -475,17 +492,30 @@ export async function getServerSideProps(context) {
   //jis slug ki tshirt/hhoodie click kri ,uska title vahi tshirt/hoodie aa jayenge
   //console.log("products from slug = ",product)
 
-  let all_Tshirts = await Product.find({ title: product.title, category:product.category });
+  let all_Tshirts = await Product.find({
+    title: product.title,
+    category: product.category,
+  });
   //ab isme uper wale title ki tshirt jise click kiya uske saare variants aa jayenge
   //console.log("all -",all_Tshirts)
   let colorSizeSlug = {};
   //eg: {'Red': {'XL':'wear-the-chess-king-1}}
   for (let item of all_Tshirts) {
     if (Object.keys(colorSizeSlug).includes(item.color)) {
-      colorSizeSlug[item.color][item.size] = { slug: item.slug, url: item.img, price: item.price };
+      colorSizeSlug[item.color][item.size] = {
+        slug: item.slug,
+        url: item.img,
+        price: item.price,
+        availableQty: item.availableQty,
+      };
     } else {
       colorSizeSlug[item.color] = {};
-      colorSizeSlug[item.color][item.size] = { slug: item.slug, url: item.img, price: item.price };
+      colorSizeSlug[item.color][item.size] = {
+        slug: item.slug,
+        url: item.img,
+        price: item.price,
+        availableQty: item.availableQty,
+      };
     }
   }
 
@@ -500,8 +530,6 @@ export async function getServerSideProps(context) {
 }
 
 export default Slug;
-
-
 
 // colosizeSlug :
 // {
@@ -592,7 +620,6 @@ export default Slug;
 
 //date - 17-4-22
 //issue of setColor & setSize is resolved but now the window reload functon disabled. It is beacuse when the page reloads , the state value of color and size revert back to the its initial value & not the current value. That's why you can see the updated url is not displayed in chrome tab.
-
 
 //date - 18/08/2022
 //issue is resolved by using router.push in place of window.location
