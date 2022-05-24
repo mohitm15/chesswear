@@ -145,6 +145,7 @@ const Privacypolicy = () => {
             </li>
             <li>
               <p className="tracking-wide text-lg mb-4">Address, State, Province, ZIP/Postal code, City</p>
+              <p className="tracking-wide text-lg mb-4">Address, State, Province, ZIP/Postal code, City</p>
             </li>
             <li>
               <p className="tracking-wide text-lg mb-4">Usage Data</p>

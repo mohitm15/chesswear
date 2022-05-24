@@ -78,7 +78,13 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug, product }) => {
           pauseOnHover={false}
           theme="colored"
         />
-        <div className={`container px-5 py-16 mx-auto ${colorSizeSlug[color][size]["availableQty"] <= 0 ? 'opacity-60 ': 'opacity-100'} `}>
+        <div
+          className={`container px-5 py-16 mx-auto ${
+            colorSizeSlug[color][size]["availableQty"] <= 0
+              ? "opacity-60 "
+              : "opacity-100"
+          } `}
+        >
           <div className="lg:w-4/5 mx-auto flex flex-wrap overflow-hidden">
             <img
               alt="ecommerce "
@@ -391,7 +397,9 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug, product }) => {
               <div className="flex">
                 {colorSizeSlug[color][size]["availableQty"] <= 0 ? (
                   <>
-                    <span className="leading-relaxed mb-4 text-red-700 rounded-3xl bg-red-100 hover:bg-red-100/70 p-3 border-[1px] border-red-700 inline-flex items-center justify-center ">This item is currently out of Stock. Please stay tuned :)</span>
+                    <span className="leading-relaxed mb-4 text-red-700 rounded-3xl bg-red-100 hover:bg-red-100/70 p-3 border-[1px] border-red-700 inline-flex items-center justify-center ">
+                      This item is currently out of Stock. Please stay tuned :)
+                    </span>
                   </>
                 ) : (
                   <>
@@ -428,18 +436,16 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug, product }) => {
                     >
                       Buy Now
                     </button>
-                    {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 md:ml-6">
-                  <svg
-                    fill="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-5 h-5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-                  </svg>
-                </button> */}
+                    <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 md:ml-6 focus:outline-none">
+                      <svg
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-5 h-5 fill-current stroke-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+                      </svg>
+                    </button>
                   </>
                 )}
               </div>

@@ -70,30 +70,35 @@ const Footer = () => {
                 CUSTOMER SERVICE
               </h2>
               <nav className="list-none mb-10">
-              <li>
-                <Link href={"/contact"}>
-                  <a className="text-gray-600 hover:text-gray-800">Contact Us</a>
+                <li>
+                  <Link href={"/contact"}>
+                    <a className="text-gray-600 hover:text-gray-800">
+                      Contact Us
+                    </a>
                   </Link>
                 </li>
-                
+
                 <li>
                   <Link href={"/about"}>
-                  <a className="text-gray-600 hover:text-gray-800">About Us</a>
+                    <a className="text-gray-600 hover:text-gray-800">
+                      About Us
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href={"/privacypolicy"}>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Privacy Policy
-                  </a>
+                    <a className="text-gray-600 hover:text-gray-800">
+                      Privacy Policy
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Terms of Use
-                  </a>
+                  <Link href={"/termsandconditions"}>
+                    <a className="text-gray-600 hover:text-gray-800">
+                      Terms and Conditions
+                    </a>
+                  </Link>
                 </li>
-                
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
