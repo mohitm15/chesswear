@@ -10,7 +10,7 @@ const handler = async (req, res) => {
   console.log(serviceable_pincodes)
   
   let token = jwt.sign(
-    { email: req.body.email },
+    { name: req.body.name, email: req.body.email },
     process.env.JWT_SECRET,
     { expiresIn: "2d" }
   );

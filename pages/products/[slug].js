@@ -8,13 +8,13 @@ import { toast, ToastContainer } from "react-toastify";
 
 const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug, product }) => {
   //console.log(all_Tshirts);
-
   //console.log("keys = ",Object.keys(colorSizeSlug["Red"]))
 
   const router = useRouter();
   const { slug } = router.query;
   const [pin, setPin] = useState();
   const [isAvailable, setIsAvailable] = useState();
+  const [isWishlist, setIswishlist] = useState(false);
 
   const [color, setColor] = useState(all_Tshirts[0].color);
   const [size, setSize] = useState(all_Tshirts[0].size);
@@ -61,7 +61,13 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug, product }) => {
     //console.log("url = ",url, "newcolor - ",newcolor, "newsize - ", newsize)
     //console.log("newvaraint -", colorSizeSlug);
     router.push(url, undefined, { shallow: true });
+    
   };
+
+  const handleWishList = async() => {
+    setIswishlist(!isWishlist);
+    //console.log("slug added = ", colorSizeSlug[color][size]["slug"])
+  }
 
   return (
     <>
@@ -436,7 +442,7 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug, product }) => {
                     >
                       Buy Now
                     </button>
-                    <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 md:ml-6 focus:outline-none">
+                    <button className={`rounded-full w-10 h-10 ${isWishlist ? 'bg-rose-200' : 'bg-gray-200'} p-0 border-0 inline-flex items-center justify-center ${isWishlist ? 'text-rose-500': 'text-gray-500'} ml-4 md:ml-6 focus:outline-none`} onClick={handleWishList}>
                       <svg
                         strokeLinecap="round"
                         strokeLinejoin="round"

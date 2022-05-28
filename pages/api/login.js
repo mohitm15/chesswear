@@ -19,7 +19,7 @@ const handler = async (req, res) => {
         req.body.password === originalPassword
       ) {
         let token = jwt.sign(
-          { email: user.email },
+          { name: user.name,email: user.email },
           process.env.JWT_SECRET,
           { expiresIn: "2d" }
         );

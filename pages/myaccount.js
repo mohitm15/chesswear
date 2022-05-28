@@ -93,11 +93,9 @@ const MyAccount = ({ usertoken }) => {
               </button>
             </div>
             <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-              <a className="text-indigo-500">chesswear@gmail.com</a>
+              <a className="text-indigo-500">care_chesswear@gmail.com</a>
               <p className="leading-normal my-5">
-                49 Smith St.
-                <br />
-                Bhopal, MP 462010
+              Chesswear Group Private Limited , J-32, Sector-63, Noida, Uttar Pradesh, 201301
               </p>
               <span className="inline-flex">
                 <a className="text-gray-500">

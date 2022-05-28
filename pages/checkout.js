@@ -125,7 +125,7 @@ const Checkout = ({
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    console.log("response from order- ", response);
+    //console.log("response from order- ", response);
     if (response.success === true) {
       localStorage.setItem("token", response.authToken);
       toast.success("Order Added Successfully!", {
