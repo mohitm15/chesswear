@@ -244,7 +244,7 @@ const Checkout = ({
           draggable
           pauseOnHover
         />
-        <h1 className="text-xl md:text-3xl text-center my-8 font-semibold">
+        <h1 className="text-xl md:text-3xl text-center my-8 font-semibold font-Lobster tracking-wide">
           Checkout
         </h1>
 

@@ -9,13 +9,13 @@ const Track = ({order}) => {
       <h2 className="text-sm title-font text-gray-500 text-center pt-3 md:pt-7 tracking-widest">
         CHESSWEAR.COM
       </h2>
-      <h1 className="text-gray-900 text-3xl title-font font-medium text-center mb-4">
+      <h1 className="text-gray-900 text-5xl title-font font-Lobster tracking-wide text-center mb-4">
         Track Your Order
       </h1>
 
       <div className="container px-5 py-12 mx-auto flex flex-wrap">
         <div className="md:w-2/3 md:pr-12 md:py-4 md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200 container">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 font-Rubik">
             Shipping To :
           </h1>
           <p className="leading-relaxed text-base"><span className="text-blue-900 font-extralight">Order No. {order.orderId} </span> : {order.address}</p>

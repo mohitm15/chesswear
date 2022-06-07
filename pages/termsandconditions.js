@@ -4,11 +4,11 @@ const Termsandconditions = () => {
   return (
     <>
       <section className="text-gray-600 body-font">
-        <div className="text-black-600 mx-2 md:mx-10 my-2 py-24">
-          <h2 className="px-10 py-2 text-gray-600 font-bold title-font tracking-wider text-4xl text-center mb-4">
+        <div className="text-black-600 mx-2 md:mx-10 my-2 py-10 font-Rubik">
+          <h2 className="px-10 py-2 text-gray-900 font-bold title-font tracking-wider text-5xl text-center mb-4 font-Lobster">
             Terms &amp; Conditions
           </h2>
-          <p className="px-10 py-2">
+          <p className="px-10 py-2 ">
             These terms and conditions outline the rules and regulations for the
             use of Chesswear&quot;s Website, located at www.chesswear.com. By
             accessing this website we assume you accept these terms and

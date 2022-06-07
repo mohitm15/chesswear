@@ -88,22 +88,22 @@ const Navbar = ({
       <div className="nav">
         <ul className="flex items-center space-x-4 md:space-x-6 font-bold md:text-lg">
           <Link href={"/tshirts"}>
-            <a className="hover:text-blue-700">
+            <a className="hover:text-blue-700 font-Rubik">
               <li>Tshirts</li>
             </a>
           </Link>
           <Link href={"/hoodies"}>
-            <a className="hover:text-blue-700">
+            <a className="hover:text-blue-700 font-Rubik">
               <li>Hoodies</li>
             </a>
           </Link>
           <Link href={"/chessboards"}>
-            <a className="hover:text-blue-700">
+            <a className="hover:text-blue-700 font-Rubik">
               <li>ChessBoards</li>
             </a>
           </Link>
           <Link href={"/mugs"}>
-            <a className="hover:text-blue-700">
+            <a className="hover:text-blue-700 font-Rubik">
               <li>Mugs</li>
             </a>
           </Link>
@@ -114,11 +114,11 @@ const Navbar = ({
         <span onMouseOver={()=>setDropdown(true)} onMouseLeave={()=>setDropdown(false)}>
         { dropdown && <div className="absolute right-7 top-5 md:right-12 md:top-8">
         <div id="dropdownNavbar" className=" z-10 rounded-lg w-36 md:w-44 bg-blue-200 divide-y divide-blue-900">
-                <ul className="py-1 text-sm text-gray-700 dark:text-blue-400" aria-labelledby="dropdownLargeButton">
+                <ul className="py-1 text-sm text-gray-700 dark:text-blue-400 font-Rubik" aria-labelledby="dropdownLargeButton">
                   <Link href={'/myaccount'}><li><a href="#" className="block py-2 px-4 hover:bg-blue-100">My Account</a></li></Link>
                   <Link href={'/orders'}><li><a href="#" className="block py-2 px-4 hover:bg-blue-100 "> My Orders</a></li></Link>
                 </ul>
-                <div className="py-1">
+                <div className="py-1 font-Rubik">
                   <li onClick={logout} className="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-100 ">Sign out</li>
                 </div>
             </div>
@@ -136,7 +136,7 @@ const Navbar = ({
         {!usertoken.value && (
           <Link href={"/login"}>
             <a>
-              <button className="flex text-white bg-blue-500 border-0 py-1 px-2 focus:outline-none hover:bg-blue-600 rounded text-base">
+              <button className="flex text-white bg-blue-500 border-0 py-1 px-2 focus:outline-none hover:bg-blue-600 rounded text-base font-Rubik">
                 Login
               </button>
             </a>
@@ -156,14 +156,14 @@ const Navbar = ({
           showSidecart ? `block` : "hidden"
         } `}
       >
-        <h2 className="text-2xl font-bold text-center">Shopping Cart </h2>
+        <h2 className="text-2xl font-extrabold text-center font-Dancing">Shopping Cart </h2>
         <div className="text-black h-[1px] mt-3 bg-black" />
         <span className="absolute top-5 right-2 cursor-pointer text-2xl text-blue-500">
           <AiFillCloseCircle onClick={toggleCart} />
         </span>
-        <ol className="list-decimal font-semibold">
+        <ol className="list-decimal font-semibold ">
           {Object.keys(cart).length === 0 && (
-            <div className="mt-5 text-center text-xl font-extralight">
+            <div className="my-5 text-center text-xl font-extralight font-Zilla">
               Your Cart is Empty :(
             </div>
           )}

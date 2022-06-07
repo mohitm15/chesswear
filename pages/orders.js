@@ -42,13 +42,13 @@ const Orders = () => {
   //console.log("yo = ",orders)
   return (
     <div className="container mx-auto min-h-screen">
-      <h1 className="font-bold text-center text-2xl lg:text-4xl p-8">My Orders</h1>
+      <h1 className="font-bold text-center text-2xl lg:text-4xl p-8 font-Lobster tracking-wide">My Orders</h1>
       <div className="flex flex-col">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
             <div className="overflow-hidden">
               <table className="min-w-full border-[1px]">
-                <thead className=" border-b text-gray-100 bg-gray-700">
+                <thead className=" border-b text-gray-100 bg-gray-700 font-Rubik">
                   <tr>
                     <th
                       scope="col"

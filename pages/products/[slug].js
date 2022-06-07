@@ -101,7 +101,7 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug, product }) => {
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 CHESS WEAR
               </h2>
-              <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+              <h1 className="text-gray-900 text-3xl title-font font-medium font-Rubik mb-1">
                 {all_Tshirts[0].title} [{color} - {size}]
               </h1>
               <div className="flex mb-4">
@@ -202,7 +202,7 @@ const Slug = ({ addToCart, buyNow, all_Tshirts, colorSizeSlug, product }) => {
                   </a>
                 </span> */}
               </div>
-              <p className="leading-relaxed">{all_Tshirts[0].desc}</p>
+              <p className="leading-relaxed font-Zilla">{all_Tshirts[0].desc}</p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
                   <span className="mr-3">Color</span>

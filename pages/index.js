@@ -19,10 +19,10 @@ export default function Home() {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-2 mx-auto">
           <div className="flex flex-wrap ml-4 sm:ml-1  mb-2 flex-col items-center text-center py-4 border-[1px] bg-gradient-to-b from-slate-200 to-blue-200 z-10">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-              CHESSWEAR.COM
+            <h1 className="sm:text-4xl text-2xl font-Lobster title-font  mb-2 text-gray-900">
+              Chesswear.com
             </h1>
-            <p className="lg:w-1/2  w-full leading-relaxed text-gray-500">
+            <p className="lg:w-1/2  w-full leading-relaxed font-Dancing text-gray-700">
               Wear with Chess
             </p>
           </div>
@@ -92,7 +92,7 @@ export default function Home() {
               </div>
 
               <div className="flex w-full mb-20 flex-wrap items-center">
-                <h1 className="sm:text-5xl text-2xl font-bold text-blue-800 title-font lg:w-1/4 lg:mb-0 mb-4">
+                <h1 className="sm:text-5xl text-2xl font-bold font-Dancing text-blue-800 title-font lg:w-1/4 lg:mb-0 mb-4">
                   Grab the chess wardrobe
                 </h1>
                 <p className="lg:pl-6 lg:w-2/3  mx-auto leading-relaxed text-base md:text-xl">
@@ -121,7 +121,7 @@ export default function Home() {
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                   </svg>
                 </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
+                <h2 className="text-lg text-gray-900 font-medium font-Rubik title-font mb-2">
                   Premium Tshirts
                 </h2>
                 <p className="leading-relaxed text-base">
@@ -146,7 +146,7 @@ export default function Home() {
                     <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
                   </svg>
                 </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
+                <h2 className="text-lg text-gray-900 font-medium font-Rubik title-font mb-2">
                   Free Shipping
                 </h2>
                 <p className="leading-relaxed text-base">
@@ -170,7 +170,7 @@ export default function Home() {
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
                 </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
+                <h2 className="text-lg text-gray-900 font-medium font-Rubik title-font mb-2">
                   Amazing Offers
                 </h2>
                 <p className="leading-relaxed text-base">

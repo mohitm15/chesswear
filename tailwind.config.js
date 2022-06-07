@@ -4,7 +4,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        Dancing:["Dancing Script","cursive"],
+        Lobster:["Lobster Two","cursive"],
+        Zilla:["Zilla Slab","serif"],
+        Rubik:["Rubik","sans-serif"],
+      }
+    },
   },
   plugins: [],
 }

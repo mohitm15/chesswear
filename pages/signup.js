@@ -60,7 +60,7 @@ const Signup = () => {
           draggable
           pauseOnHover
         />
-        <div className="max-w-md w-full space-y-8">
+        <div className="max-w-md w-full space-y-8 font-Rubik">
           <div>
             <img
               className="mx-auto h-12 w-auto"

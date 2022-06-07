@@ -2,9 +2,9 @@ import React from "react";
 
 const Privacypolicy = () => {
   return (
-    <section className="text-gray-600 body-fon container mx-auto">
-      <div className="py-2 lg:py-8 mx-auto">
-        <h2 className="text-black font-bold title-font  text-4xl text-center mb-4 xl:mb-8">
+    <section className="text-gray-600 body-font container mx-auto">
+      <div className="py-2 lg:py-8 mx-auto font-Rubik">
+        <h2 className="text-black font-bold title-font  text-5xl text-center mb-4 xl:mb-8 font-Lobster tracking-wide">
           Privacy Policy
         </h2>
         <div className="mx-6 md:mx-12 text-base break-words selection:text-blue-600 selection:bg-blue-200">
